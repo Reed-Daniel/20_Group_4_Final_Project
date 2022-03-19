@@ -3,14 +3,16 @@
 - The relationship between NBA player statistics and "peak" performance
 
 ## Reason for Selecting Topic
-- 
+- We would like to build a model that when fed a number of different statistics can predict the number of games a player will play
 
 ## Source Data
-- Our source data was taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
+- Our source data will be taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
+- For the purpose of our analysis we will only focus on years 1980-present as that is when the "modern" NBA began 
 
 
 ## Questions We Hope to Answer
 - When is a NBA player's peak?
+- At what point does a player's decline begin?
 - What stats are indicators of peak performance?
 - Are teams getting adequate value from the players they pay top dollar for?
 
@@ -25,17 +27,16 @@
 - Data Cleaning & Analysis
 	- Pandas
 	- Numpy
-	- SciKit Learn
 	- MatPlotLib
 - Machine Learning
+	- SciKitLearn
 	- Supervised Learning Model
-	- etc
 - Dashboard
 	- HTML
 	- CSS
 	- Javascript
-	- Tableau?
-	- Github Pages?
+	- Tableau
+	- Github Pages
 
 ## Machine Learning Model
 
