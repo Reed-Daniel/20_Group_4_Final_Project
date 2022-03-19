@@ -12,6 +12,7 @@
 
 ## Questions We Hope to Answer
 - When is a NBA player's peak?
+- At what point does a player's decline begin?
 - What stats are indicators of peak performance?
 - Are teams getting adequate value from the players they pay top dollar for?
 
