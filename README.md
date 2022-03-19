@@ -3,10 +3,10 @@
 - The relationship between NBA player statistics and "peak" performance
 
 ## Reason for Selecting Topic
-- 
+
 
 ## Source Data
-- Our source data was taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
+- Our source data will be taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
 
 
 ## Questions We Hope to Answer
@@ -25,17 +25,16 @@
 - Data Cleaning & Analysis
 	- Pandas
 	- Numpy
-	- SciKit Learn
 	- MatPlotLib
 - Machine Learning
+	- SciKitLearn
 	- Supervised Learning Model
-	- etc
 - Dashboard
 	- HTML
 	- CSS
 	- Javascript
-	- Tableau?
-	- Github Pages?
+	- Tableau
+	- Github Pages
 
 ## Machine Learning Model
 
