@@ -3,10 +3,11 @@
 - The relationship between NBA player statistics and "peak" performance
 
 ## Reason for Selecting Topic
-
+- We would like to build a model that when fed a number of different statistics can predict when a player's decline begins
 
 ## Source Data
 - Our source data will be taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
+- For the purpose of our analysis we will only focus on years 1980-present as that is when the "modern" NBA began 
 
 
 ## Questions We Hope to Answer
