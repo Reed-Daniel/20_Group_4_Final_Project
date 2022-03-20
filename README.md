@@ -48,16 +48,12 @@
 
 ## Machine Learning Model
 <p align="center">
-<img width="500" alt="nba_season_pca_pg1" src="https://user-images.githubusercontent.com/93271297/159189319-1421feb9-7375-484e-b852-19ddb09c5853.png">
-<img width="500" alt="nba_season_pca_pg2" src="https://user-images.githubusercontent.com/93271297/159189546-b35acf66-efdc-43d6-9120-d7e07542576e.png">
-<img width="500" alt="nba_season_pca_pg3" src="https://user-images.githubusercontent.com/93271297/159189559-bfe10713-752c-44ea-a76a-4e858a883497.png">
-<img width="500" alt="nba_season_pca_pg5" src="https://user-images.githubusercontent.com/93271297/159189577-e979562c-bccf-4949-93fc-53b8a19500c2.png"
-<img width="500" alt="nba_season_pca_pg6" src="https://user-images.githubusercontent.com/93271297/159189588-d7199add-f4d1-4970-98e8-bdbf2badd0a6.png">
-<img width="500" alt="nba_season_pca_pg7" src="https://user-images.githubusercontent.com/93271297/159189600-09530429-3416-4cf3-bf8a-93e0f7541d77.png">
+<img width="500" alt="nba_season_logistical_pg1" src="https://user-images.githubusercontent.com/93271297/159190111-5cf01063-2bc6-4839-b9fe-bdd9ccf34378.png">
+<img width="500" alt="nba_season_logistical_pg2" src="https://user-images.githubusercontent.com/93271297/159190153-32425c4e-221e-468c-9665-dc58fdd492c0.png">
+<img width="500" alt="nba_season_logistical_pg3" src="https://user-images.githubusercontent.com/93271297/159190176-7d375dcb-13cc-4cc1-9978-e76102dca178.png">
+<img width="500" alt="nba_season_logistical_pg4" src="https://user-images.githubusercontent.com/93271297/159190207-e3ce6d97-3647-4617-ba3f-7baef91bcd9f.png">
+<img width="500" alt="nba_season_logistical_pg5" src="https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png">
+<img width="500" alt="nba_season_logistical_pg6" src="https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png">
 <p>
-
+	
 ## Dashboard
-
-
-	
-	
