@@ -54,6 +54,7 @@
 <img width="500" alt="nba_season_pca_pg5" src="https://user-images.githubusercontent.com/93271297/159189577-e979562c-bccf-4949-93fc-53b8a19500c2.png"
 <img width="500" alt="nba_season_pca_pg6" src="https://user-images.githubusercontent.com/93271297/159189588-d7199add-f4d1-4970-98e8-bdbf2badd0a6.png">
 <img width="500" alt="nba_season_pca_pg7" src="https://user-images.githubusercontent.com/93271297/159189600-09530429-3416-4cf3-bf8a-93e0f7541d77.png">
+<p>
 
 ## Dashboard
 
