@@ -29,6 +29,7 @@
 	- Numpy
 	- MatPlotLib
 - Machine Learning
+	- PowerBi
 	- SciKitLearn
 	- Supervised Learning Model
 - Dashboard
@@ -39,6 +40,7 @@
 	- Github Pages
 
 ## Machine Learning Model
+
 
 ## Dashboard
 
