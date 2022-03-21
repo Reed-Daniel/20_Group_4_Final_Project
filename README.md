@@ -40,6 +40,8 @@
 	- Github Pages
 
 ## Database
+### Sample structure of the database.
+
 <p align="center">
 <img width="600" alt="ERD_Mock_Data_1" src="https://user-images.githubusercontent.com/93271297/159188954-71be3a97-d7c8-4d2e-b09a-dad4d564d98f.jpeg">
 <img width="600" alt="ERD_Mock_Data_2" src="https://user-images.githubusercontent.com/93271297/159188958-d5358084-fa24-4f86-954e-b747a3b06b3a.jpeg">
@@ -47,6 +49,7 @@
 <p>
 
 ## Machine Learning Model
+### Sample structure of the Machine Learning Model.
 <p align="center">
 <img width="500" alt="nba_season_logistical_pg1" src="https://user-images.githubusercontent.com/93271297/159190111-5cf01063-2bc6-4839-b9fe-bdd9ccf34378.png">
 <img width="500" alt="nba_season_logistical_pg2" src="https://user-images.githubusercontent.com/93271297/159190153-32425c4e-221e-468c-9665-dc58fdd492c0.png">
