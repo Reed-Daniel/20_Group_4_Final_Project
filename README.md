@@ -1,9 +1,9 @@
 # Group_4_Final_Project
 ## Topic
-- The relationship between NBA player statistics and "peak" performance
+- The relationship between NBA player statistics and performance over the course of the modern NBA
 
 ## Reason for Selecting Topic
-- We would like to build a model that when fed a number of different statistics can predict the number of games a player will play
+- We would like to explore the NBA statistical data to determine if the NBA has a base-line for it's athletes, how that base line weighs against the top performers throughout the decades, and if you can predict the number of games they would play per season.
 
 ## Source Data
 - Our source data will be taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
@@ -11,10 +11,11 @@
 
 
 ## Questions We Hope to Answer
-- When is a NBA player's peak?
-- At what point does a player's decline begin?
-- What stats are indicators of peak performance?
-- Are teams getting adequate value from the players they pay top dollar for?
+- Does the NBA look the same decade by decade in terms of performance?
+- What does a prototypical player look like in each decade?
+	- How has that changed over time?
+- Does productivity changed from decade to decade?
+- Can you predict the number of games a player will play in a season based on their statistics 
 
 
 ## Communication Protocols
