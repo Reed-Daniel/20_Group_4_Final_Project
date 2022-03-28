@@ -56,11 +56,11 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 
 # ERD <a name="erd"></a>
 ## High Level <a name="high-level"></a>
+![Pic 1](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/High_Level%20ERD_r1.jpg)
 
-
-## Database Model <a name="database-model"></a>
-### Sample Structure of the Database Model <a name= "sample-structure-of-the-database-model"><a/>
-#### NBA Database
+# Database Model <a name="database-model"></a>
+## Sample Structure of the Database Model <a name= "sample-structure-of-the-database-model"><a/>
+### NBA Database
 <p align="center">
 <img width="600" alt="ERD_Mock_Data_1" src="https://user-images.githubusercontent.com/93271297/159188954-71be3a97-d7c8-4d2e-b09a-dad4d564d98f.jpeg">
 	
@@ -69,8 +69,8 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 <img width="600" alt="ERD_Mock_Data_3" src="https://user-images.githubusercontent.com/93271297/159188966-7e0f4fac-24f3-40bb-9e2b-3e48523f1c4a.jpeg">
 <p>
 
-## Machine Learning Model <a name="machine-learning-model"></a>
-### Sample structure of the Machine Learning Model <a name="sample-structure-of-the-machine-learning-model"></a> 
+# Machine Learning Model <a name="machine-learning-model"></a>
+## Sample structure of the Machine Learning Model <a name="sample-structure-of-the-machine-learning-model"></a> 
 <p align="center">
 <img width="500" alt="nba_season_logistical_pg1" src="https://user-images.githubusercontent.com/93271297/159190111-5cf01063-2bc6-4839-b9fe-bdd9ccf34378.png">
 <img width="500" alt="nba_season_logistical_pg2" src="https://user-images.githubusercontent.com/93271297/159190153-32425c4e-221e-468c-9665-dc58fdd492c0.png">
@@ -80,4 +80,4 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 <img width="500" alt="nba_season_logistical_pg6" src="https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png">
 <p>
 	
-## Dashboard <a name="dashboard"></a>
+# Dashboard <a name="dashboard"></a>
