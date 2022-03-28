@@ -1,4 +1,4 @@
-# How the NBA Players Performance Has Changed Over The Decades
+# NBA Player Statistics & Performance Over the Course of the Modern NBA
 # Group 4 Final Project
 # **Table of Contents** #
 1. [Topic](#topic)
@@ -21,8 +21,10 @@
 
 ## Source Data <a name="source"></a>
 - Our source data will be taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
+	- Player.csv
+	- Season_Stats.csv
+	- Player_Data.csv
 - For the purpose of our analysis we will only focus on years 1980-present as that is when the "modern" NBA began 
-
 
 ## Questions to Answer <a name="questions-to-answer"></a>
 - Does the NBA look the same decade by decade in terms of performance?
