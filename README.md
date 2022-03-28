@@ -5,8 +5,10 @@
 1. [Reason for Selecting the Topic](#reason-for-selecting-the-topic)
 1. [Source](#source)
 1. [Questions to Answer](#questions-to-answer)
-1. [Communication Protocols](#communication-protocols)
+1. [Project & Communication Protocols](#project-communication-protocols)
 1. [Tools](#tools)
+1. [ERD](#erd)
+    1. [High Level](#high-level)
 1. [Database Model](#database-model)
     1. [Sample Structure of the Database Model](#sample-structure-of-the-database-model)
 1. [Machine Learning Model](#machine-learning-model)
@@ -19,13 +21,6 @@
 ## Reason for Selecting Topic <a name="reason-for-selecting-the-topic"></a>
 - We would like to explore statistical data to determine if the NBA has a base-line for it's athletes, how that base line weighs against the top performers throughout the decades, and if you can predict the number of games a player would play per season
 
-## Source Data <a name="source"></a>
-- Our source data will be taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
-	- Player.csv
-	- Season_Stats.csv
-	- Player_Data.csv
-- For the purpose of our analysis we will only focus on years 1980-present as that is when the "modern" NBA began 
-
 ## Questions to Answer <a name="questions-to-answer"></a>
 - Does the NBA look the same decade by decade in terms of performance?
 - What does a prototypical player look like in each decade?
@@ -33,29 +28,35 @@
 - Can you predict the number of games a player will play in a season based on their statistics?
 	- Does decade have an impact of number of games played?
 
-## Communication Protocols <a name="communication-protocols"></a>
+## Project and Communication Protocols <a name="project-communication-protocols"></a>
 - Our group maintains a steady flow of communication through Slack and our Teams page to stay updated on the status of the project deliverables as well as to coordinate additional meetings outside of class time. 
 
+Responsibility Legend|Symbol|Team Member|System|Phase  
+|:----------------------------------:|:--:|:--------------------:|:-----------------------:|:-----:|
+The team member in the square role will be responsible for the respository | □ | K. McClelland | GitHub <br /> Teams <br /> Calendar <br /> | I & II |
+The member in the triangle role will create a mockup of a machine learning model.  This can even be a diagram that explains how it will work concurrently with the rest of the project steps | ∆ | S. Crimi | ML | I & II |
+The member in the circle role will create a mockup of a database with a set of sample data, or even fabricated data.  This will ensure the database will work seamlessly with the rest of the project | ○ | J. Klein | Database | I & II |
+The member in the X role will decide which technologies will be used for each step of the project | X | S. Crimi <br /> J. Klein <br /> R. Daniel <br /> | ML <br /> Database <br /> Dashboard <br />| I & II <br /> I & II <br /> II |
+
+## Source Data <a name="source"></a>
+- Our source data will be taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
+	- Player.csv
+	- Season_Stats.csv
+	- Player_Data.csv
+- For the purpose of our analysis we will only focus on years 1980-present as that is when the "modern" NBA began 
 
 ## Tools <a name="tools"></a>
-- Database
-	- PostgreSQL
-	- AWS
-- Data Cleaning & Analysis
-	- Pandas
-	- Numpy
-	- MatPlotLib
-- Machine Learning
-	- PowerBi
-	- SciKitLearn
-	- Google CoLab
-	- Supervised Learning Model
-- Dashboard
-	- HTML
-	- CSS
-	- Javascript
-	- Tableau
-	- Github Pages
+Systems | Tools 
+|:--------------------------:|:---------------------------:|
+Data Cleaning & Analysis | Pandas <br /> Numpy <br /> MatPlotLib|
+ERD | Power BI <br /> Lucid Charts <br /> Quick Database Diagrams |
+Database | PgAdmin4 <br /> AWS |
+Machine Learning | SciKitLearn <br /> Google CoLab <br /> Supervised Learning Model |
+Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages |
+
+# ERD <a name="erd"></a>
+## High Level <a name="high-level"></a>
+
 
 ## Database Model <a name="database-model"></a>
 ### Sample Structure of the Database Model <a name= "sample-structure-of-the-database-model"><a/>
