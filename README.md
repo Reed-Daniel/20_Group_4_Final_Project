@@ -58,6 +58,12 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 ## High Level <a name="high-level"></a>
 ![Pic 1](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/High_Level%20ERD_r1.jpg)
 
+## NBA Stats Database ERD
+![Pic](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/NBA_Stats_DB.png)
+
+## NBA Machine Learning ERD
+![Pic](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/Machine_Learning_Diagram(1).png)
+
 # Database Model <a name="database-model"></a>
 ## Sample Structure of the Database Model <a name= "sample-structure-of-the-database-model"><a/>
 ### NBA Database
