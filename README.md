@@ -1,4 +1,5 @@
-# Group_4_Final_Project
+# How the NBA Players Performance Has Changed Over The Decades
+# Group 4 Final Project
 # **Table of Contents** #
 1. [Topic](#topic)
 1. [Reason for Selecting the Topic](#reason-for-selecting-the-topic)
