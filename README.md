@@ -38,6 +38,7 @@
 ## Tools <a name="tools"></a>
 - Database
 	- PostgreSQL
+	- AWS
 - Data Cleaning & Analysis
 	- Pandas
 	- Numpy
@@ -55,10 +56,12 @@
 
 ## Database Model <a name="database-model"></a>
 ### Sample Structure of the Database Model <a name= "sample-structure-of-the-database-model"><a/>
-
+#### NBA Database
 <p align="center">
 <img width="600" alt="ERD_Mock_Data_1" src="https://user-images.githubusercontent.com/93271297/159188954-71be3a97-d7c8-4d2e-b09a-dad4d564d98f.jpeg">
+	
 <img width="600" alt="ERD_Mock_Data_2" src="https://user-images.githubusercontent.com/93271297/159188958-d5358084-fa24-4f86-954e-b747a3b06b3a.jpeg">
+	
 <img width="600" alt="ERD_Mock_Data_3" src="https://user-images.githubusercontent.com/93271297/159188966-7e0f4fac-24f3-40bb-9e2b-3e48523f1c4a.jpeg">
 <p>
 
