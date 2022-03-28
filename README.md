@@ -46,6 +46,7 @@
 - Machine Learning
 	- PowerBi
 	- SciKitLearn
+	- Google CoLab
 	- Supervised Learning Model
 - Dashboard
 	- HTML
