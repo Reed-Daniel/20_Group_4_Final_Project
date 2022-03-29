@@ -9,6 +9,8 @@
 1. [Tools](#tools)
 1. [ERD](#erd)
     1. [High Level](#high-level)
+    1. [NBA Stats Database](#nba-stats-database-erd)
+    1. [Machine Learning ERD](#machine-learning-erd)
 1. [Database Model](#database-model)
     1. [Sample Structure of the Database Model](#sample-structure-of-the-database-model)
 1. [Machine Learning Model](#machine-learning-model)
@@ -58,10 +60,10 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 ## High Level <a name="high-level"></a>
 ![Pic 1](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/High_Level%20ERD_r1.jpg)
 
-## NBA Stats Database ERD
+## NBA Stats Database ERD <a name="nba-stats-database-erd"></a>
 ![Pic](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/NBA_Stats_DB.png)
 
-## NBA Machine Learning ERD
+## NBA Machine Learning ERD <a name="machine-learning-erd"></a>
 ![Pic](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/Machine_Learning_Diagram(1).png)
 
 # Database Model <a name="database-model"></a>
