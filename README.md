@@ -103,7 +103,7 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 <img width="500" alt="nba_season_logistical_pg6" src="https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png">
 <p>
 
-# Presentation <a name='presentation"></a>
+# Presentation <a name="presentation"></a>
 ![Pic 5](https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g11fae844228_2_85)
 
 # Dashboard <a name="dashboard"></a>
