@@ -15,6 +15,7 @@
     1. [Sample Structure of the Database Model](#sample-structure-of-the-database-model)
 1. [Machine Learning Model](#machine-learning-model)
     1. [Sample Structure of the Machine Learning Model](#sample-structure-of-the-machine-learning-model)
+1. [Presentation](#presentation)
 1. [Dashboard](#dashboard)
 
 ## Topic <a name="topic"></a>
@@ -101,5 +102,8 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 <img width="500" alt="nba_season_logistical_pg5" src="https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png">
 <img width="500" alt="nba_season_logistical_pg6" src="https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png">
 <p>
-	
+
+# Presentation <a name='presentation"></a>
+![Pic 5](https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g11fae844228_2_85)
+
 # Dashboard <a name="dashboard"></a>
