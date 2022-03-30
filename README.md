@@ -42,10 +42,20 @@ The member in the X role will decide which technologies will be used for each st
 
 ## Source Data <a name="source"></a>
 - Our source data will be taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
-	- Player.csv
-	- Season_Stats.csv
-	- Player_Data.csv
+
+File Name |Number of Rows|Number of Columns  
+|:----------------------------------:|:-----------:|:---------:|
+Player.csv | XXXXXX | XXXXXX |
+Season_Stats.csv | XXXXXX | XXXXXX |
+Player_Data.csv | XXXXXX | XXXXXX |
+	
 - For the purpose of our analysis we will only focus on years 1980-present as that is when the "modern" NBA began 
+  
+File Name |Number of Rows|Number of Columns  
+|:----------------------------------:|:-----------:|:---------:|
+Player.csv | XXXXXX | XXXXXX |
+Season_Stats.csv | XXXXXX | XXXXXX |
+Player_Data.csv | XXXXXX | XXXXXX |
 
 ## Tools <a name="tools"></a>
 Systems | Tools 
@@ -61,10 +71,14 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 ![Pic 1](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/High_Level%20ERD_r1.jpg)
 
 ## NBA Stats Database ERD <a name="nba-stats-database-erd"></a>
-![Pic](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/NBA_Stats_DB.png)
+![Pic 2](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/NBA_Stats_DB.png)
 
 ## NBA Machine Learning FSD <a name="machine-learning-erd"></a>
-![Pic](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/Machine_Learning_Diagram(1).png)
+### Supervised Model
+![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/SupervisedModelDiagram.jpg)
+
+### Unservised Model
+![Pic 4](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/UnsupervisedModelDiagram.jpg)
 
 # Database Model <a name="database-model"></a>
 ## Sample Structure of the Database Model <a name= "sample-structure-of-the-database-model"><a/>
