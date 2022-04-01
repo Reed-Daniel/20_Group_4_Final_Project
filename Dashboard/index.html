@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Prime Time!</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="bg-info">
+    <div class="wrapper">
+        <nav class="navbar navbar-light bg-info navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">NBA Prime Time!</a>
+        </nav>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-4"></h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <h3>Performance in the League: <small> How do players measure up against the greats?<br><br>LETS FIND OUT!</small></h3>
+          </div>
+          <div class="col-md-6">
+            <p>
+              - Does performance in the NBA look the same decade by decade?<br><br> - What does a prototypical player look like in each decade?<br><br> - How has that changed over time?<br><br> - Does the decade have an affect on the number of games a player will play in a season? 
+            </p>
+          </div>
+          <div class="col-md-3">
+              <img src="https://cdn.bleacherreport.net/images_root/slides/photos/000/621/847/wilt3_original.jpg?1294624028" alt="wilt" width="300" height="300">
+          </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <form class="bg-info">
+                    <p>Filter Search</p>
+                    <ul class="list-group bg-info">
+                        <li class="list-group-item bg-info">
+                            <label for="date">Enter Name</label>
+                            <input type="text" placeholder="Michael Jordan" id="Name" />
+                        </li>
+                        <li class="list-group-item bg-info">
+                            <label for="date">Enter Birth Year</label>
+                            <input type="text" placeholder="1991" id="datetime" />
+                        </li>
+                        <li class = "list-group-item bg-info">
+                            <label for="city">Enter Position</label><br>
+                              <input type="text" placeholder="C" id="position" />
+                        </li><br>
+                        <li class = "list-group-item bg-info">
+                            <label for="state">Enter Height (in)</label><br>
+                              <input type="text" placeholder="72" id= "height" />
+                        </li><br>
+                        <li class = "list-group-item bg-info">
+                            <label for="country">Enter Weight (lbs)</label>
+                              <input type="text" placeholder="200" id="weight" />
+                        </li><br>
+                        <li class = "list-group-item bg-info">
+                            <label for="shape">Enter Stat</label><br>
+                              <input type="text" placeholder="points" id="points" />
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div class="col-md-2">
+                <form class="bg-info">
+                    <p>Era Search</p>
+                    <ul class="list-group bg-info">
+                        <li class="list-group-item bg-info">
+                            <label for="date">Enter Decade</label>
+                            <input type="text" placeholder="90s" id="datetime" />
+                        </li>
+                        <li class = "list-group-item bg-info">
+                            <label for="city">Enter Percentile</label><br>
+                              <input type="text" placeholder="Top 25%" id="percentile" />
+                        </li><br>
+                    </ul>
+                </form>
+            </div>
+            <div class="col-md-8">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Position</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                        <th>Stat</th>
+                        <th>Stat</th>
+                        <th>Stat</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row"> 
+            <div class="col-md-2">
+                <div class="well" style="border:2px solid black; background-color: info;">
+                  <h5>Player Name:</h5>
+                  <!-- <select id="selDataset"></select> -->
+                  <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                </div>
+                <div class="panel panel-primary" style="border:2px solid black; background-color: info;">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Player Info</h3>
+                  </div>
+                  <div id="sample-metadata" class="panel-body"></div>
+                </div>
+              </div>
+        </div>
+    </div>
+</body>
+</html>
