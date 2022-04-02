@@ -78,7 +78,7 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 ### Supervised Model
 ![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/SupervisedModelDiagram.jpg)
 
-### Unservised Model
+### Unsupervised Model
 ![Pic 4](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/UnsupervisedModelDiagram.jpg)
 
 # Database Model <a name="database-model"></a>
@@ -107,3 +107,12 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 (https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g11fae844228_2_85)
 
 # Dashboard <a name="dashboard"></a>
+Below is a Storyboard layouts and a Mockup layouts
+## Storyboard and Page 1 - Player Information
+![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage1.jpg)
+
+## Storyboard Page 2 - NBA Stats	
+![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage2.jpg)	
+
+## Storyboard Page 3 - NBA News	
+![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage3.jpg)	
