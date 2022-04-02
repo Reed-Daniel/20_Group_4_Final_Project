@@ -107,6 +107,9 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 (https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g11fae844228_2_85)
 
 # Dashboard <a name="dashboard"></a>
-"""Storyboards & Mockup Data"""
+Below is a Storyboard layout and a Mockup layout
+## Storyboard and Page 1
 ![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage1.jpg)
+
+## Storyboard Page 2	
 ![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage2.jpg)	
