@@ -107,41 +107,15 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 <p>
 
 # Exploratory Analysis <a name="exploratory-analysis"></a>
-<img width="700" alt="3PA & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3D3PA_YLabel%3DG.jpg">
-<figcaption align = "center"><b>Fig.1 - 3PA & Games</b></figcaption>
-</figure>
-
-<img width="700" alt="Assists & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAST_YLabel%3DG.jpg">
-<figcaption align = "center"><b>Fig.2 - Assists & Games</b></figcaption>
-</figure>
-
-<img width="700" alt="Age & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAge_YLabel%3DG.jpg">
-<figcaption align = "center"><b>Fig.3 - Age & Games</b></figcaption>
-</figure>
-
-<img width="700" alt="PF & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPF_YLabel%3DG.jpg">
-<figcaption align = "center"><b>Fig.4 - PF & Games</b></figcaption>
-</figure>
-
-<img width="700" alt="PTS & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPTS_YLabel%3DG.jpg">
-<figcaption align = "center"><b>Fig.5 - PTS & Games</b></figcaption>
-</figure>
-
-<img width="700" alt="TRB & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DTRB_YLabel%3DG.jpg">
-<figcaption align = "center"><b>Fig.6 - TRB & Games</b></figcaption>
-</figure>
-
-<img width="700" alt="Initial Top 15 Features" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Initial_Top_15_Features.jpg">
-<figcaption align = "center"><b>Fig.7 - Initial Top 15 Features</b></figcaption>
-</figure>
-
-<img width="700" alt="Initial Top 10 Features" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Final_Top_10_Features.jpg">
-<figcaption align = "center"><b>Fig.8 - Final Top 10 Features</b></figcaption>
-</figure>
-
-<img width="700" alt="Final Confusion Matrix" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/FinalConfusionMatrix.jpg">
-<figcaption align = "center"><b>Fig.5 - Final Confusion Matrix</b></figcaption>
-</figure>
+<img width="400" alt="3PA & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3D3PA_YLabel%3DG.jpg">
+<img width="400" alt="Assists & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAST_YLabel%3DG.jpg">
+<img width="400" alt="Age & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAge_YLabel%3DG.jpg">
+<img width="400" alt="PF & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPF_YLabel%3DG.jpg">
+<img width="400" alt="PTS & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPTS_YLabel%3DG.jpg">
+<img width="400" alt="TRB & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DTRB_YLabel%3DG.jpg">
+<img width="400" alt="Initial Top 15 Features" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Initial_Top_15_Features.jpg">
+<img width="400" alt="Initial Top 10 Features" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Final_Top_10_Features.jpg">
+<img width="400" alt="Final Confusion Matrix" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/FinalConfusionMatrix.jpg">
 
 # Presentation <a name="presentation"></a>
 (https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g11fae844228_2_85)
