@@ -42,6 +42,19 @@ The member in the triangle role will create a mockup of a machine learning model
 The member in the circle role will create a mockup of a database with a set of sample data, or even fabricated data.  This will ensure the database will work seamlessly with the rest of the project | ○ | J. Klein | Database | I & II |
 The member in the X role will decide which technologies will be used for each step of the project | X | S. Crimi <br /> J. Klein <br /> R. Daniel <br /> | ML <br /> Database <br /> Dashboard <br />| I & II <br /> I & II <br /> II |
 
+## Tools <a name="tools"></a>
+Systems | Tools 
+|:--------------------------:|:---------------------------:|
+Data Cleaning & Analysis | Pandas <br /> Numpy <br /> MatPlotLib|
+ERD | Power BI <br /> Lucid Charts <br /> Quick Database Diagrams |
+Database | PgAdmin4 <br /> AWS |
+Machine Learning | SciKitLearn <br /> Google CoLab <br /> Supervised Learning Model |
+Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages |
+
+# FSD & ERD <a name="fsd-&-erd"></a>
+## High Level <a name="high-level"></a>
+![Pic 1](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/High_Level%20ERD_r1.jpg)
+
 ## Source Data <a name="source"></a>
 - Our source data will be taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
 
@@ -59,18 +72,6 @@ File | XXXXXX | XXXXXX |
 File | XXXXXX | XXXXXX |
 File | XXXXXX | XXXXXX |
 
-## Tools <a name="tools"></a>
-Systems | Tools 
-|:--------------------------:|:---------------------------:|
-Data Cleaning & Analysis | Pandas <br /> Numpy <br /> MatPlotLib|
-ERD | Power BI <br /> Lucid Charts <br /> Quick Database Diagrams |
-Database | PgAdmin4 <br /> AWS |
-Machine Learning | SciKitLearn <br /> Google CoLab <br /> Supervised Learning Model |
-Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages |
-
-# FSD & ERD <a name="fsd-&-erd"></a>
-## High Level <a name="high-level"></a>
-![Pic 1](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/High_Level%20ERD_r1.jpg)
 
 ## NBA Stats Database ERD <a name="nba-stats-database-erd"></a>
 ![Pic 2](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/NBA_Stats_DB.png)
@@ -97,14 +98,17 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 * PCA KMeans Initial
 
 ## Sample structure of the Machine Learning Model <a name="sample-structure-of-the-machine-learning-model"></a> 
-<p align="center">
-<img width="500" alt="nba_season_logistical_pg1" src="https://user-images.githubusercontent.com/93271297/159190111-5cf01063-2bc6-4839-b9fe-bdd9ccf34378.png">
-<img width="500" alt="nba_season_logistical_pg2" src="https://user-images.githubusercontent.com/93271297/159190153-32425c4e-221e-468c-9665-dc58fdd492c0.png">
-<img width="500" alt="nba_season_logistical_pg3" src="https://user-images.githubusercontent.com/93271297/159190176-7d375dcb-13cc-4cc1-9978-e76102dca178.png">
-<img width="500" alt="nba_season_logistical_pg4" src="https://user-images.githubusercontent.com/93271297/159190207-e3ce6d97-3647-4617-ba3f-7baef91bcd9f.png">
-<img width="500" alt="nba_season_logistical_pg5" src="https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png">
-<img width="500" alt="nba_season_logistical_pg6" src="https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png">
-<p>
+NBA Season Logistical Pg 1 | | NBA Season Logistical Pg 2
+|:----------------------------------:|:-:|:-----------------------------------:|
+![Pic 5](https://user-images.githubusercontent.com/93271297/159190111-5cf01063-2bc6-4839-b9fe-bdd9ccf34378.png)| | ![Pic 6](https://user-images.githubusercontent.com/93271297/159190153-32425c4e-221e-468c-9665-dc58fdd492c0.png)|
+	
+NBA Season Logistical Pg 3 | | NBA Season Logistical Pg 4
+|:-----------------------------------:|:-:|:-----------------------------------:|
+![Pic 5](https://user-images.githubusercontent.com/93271297/159190176-7d375dcb-13cc-4cc1-9978-e76102dca178.png)| | ![Pic 6](https://user-images.githubusercontent.com/93271297/159190207-e3ce6d97-3647-4617-ba3f-7baef91bcd9f.png)|
+
+NBA Season Logistical Pg 5 | | NBA Season Logistical Pg 6
+|:-----------------------------------:|:-:|:-----------------------------------:|
+![Pic 5](https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png)| | ![Pic 6](https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png)|
 
 # Exploratory Analysis <a name="exploratory-analysis"></a>
 
