@@ -23,17 +23,29 @@
 - The relationship between NBA player statistics and performance over the course of the modern NBA
 
 ## Reason for Selecting Topic <a name="reason-for-selecting-the-topic"></a>
-- We would like to explore statistical data to determine if the NBA has a base-line for it's athletes, how that base line weighs against the top performers throughout the decades, and if you can predict the number of games a player would play per season
+* We would like to explore statistical data to determine if the NBA has a base-line for it's athletes, how that base line weighs against the top performers throughout the decades, and if you can predict the number of games a player would play per season
 
 ## Questions to Answer <a name="questions-to-answer"></a>
-- Does the NBA look the same decade by decade in terms of performance?
-- What does a prototypical player look like in each decade?
-	- How has that changed over time?
+* Does the NBA look the same decade by decade in terms of performance?
+* What does a prototypical player look like in each decade?
+	* How has that changed over time?
 - Can you predict the number of games a player will play in a season based on their statistics?
-	- Does decade have an impact of number of games played?
+	* Does decade have an impact of number of games played?
 
 ## Project and Communication Protocols <a name="project-communication-protocols"></a>
-- Our group maintains a steady flow of communication through Slack and our Teams page to stay updated on the status of the project deliverables as well as to coordinate additional meetings outside of class time. 
+* Our group maintains a steady flow of communication through Slack and our Teams page to stay updated on the status of the project deliverables as well as to coordinate additional meetings outside of class time. 
+
+### GitHub
+#### The main branch should include: 
+* All code necessary to perform exploratory analysis 
+* Some code necessary to complete the machine learning portion of the project 
+* README.md README.md must include: 
+	* Description of the communication protocols 
+	* Outline of the project (this may include images, but should be easy to follow and digest).  Note: The descriptions and explanations required in all other project deliverables should also be in your README.md as part of your outline, unless otherwise noted.
+* Individual Branches 
+	* Description of the communication protocols 
+	* At least one branch for each team member 
+	* Each team member has at least four commits for the duration of the second segment (eight total commits per person)
 
 Responsibility Legend|Symbol|Team Member|System|Phase  
 |:----------------------------------:|:--:|:--------------------:|:-----------------------:|:-----:|
@@ -86,62 +98,101 @@ File | XXXXXX | XXXXXX |
 # Database Model <a name="database-model"></a>
 ## Sample Structure of the Database Model <a name= "sample-structure-of-the-database-model"><a/>
 ### NBA Database
-<p align="center">
-<img width="600" alt="ERD_Mock_Data_1" src="https://user-images.githubusercontent.com/93271297/159188954-71be3a97-d7c8-4d2e-b09a-dad4d564d98f.jpeg">
-	
-<img width="600" alt="ERD_Mock_Data_2" src="https://user-images.githubusercontent.com/93271297/159188958-d5358084-fa24-4f86-954e-b747a3b06b3a.jpeg">
-	
-<img width="600" alt="ERD_Mock_Data_3" src="https://user-images.githubusercontent.com/93271297/159188966-7e0f4fac-24f3-40bb-9e2b-3e48523f1c4a.jpeg">
-<p>
+* Team members present a fully integrated database.
+* Database stores static data for use during the project 
+* Database interfaces with the project in some format (e.g., scraping updates the database, or database connects to the model) 
+* Includes at least two tables (or collections, if using MongoDB) 
+* Includes at least one join using the database language (not including any joins in Pandas) 
+* Includes at least one connection string (using SQLAlchemy or PyMongo) Note: If you use a SQL database, you must provide your ERD with relationships.
+
+ERD Mock Data 1 | 
+|:----------------------------------:|
+![Pic 5](https://user-images.githubusercontent.com/93271297/159188954-71be3a97-d7c8-4d2e-b09a-dad4d564d98f.jpeg)| 
+
+ERD Mock Data 2 |	
+|:-----------------------------------:|	
+![Pic 6](https://user-images.githubusercontent.com/93271297/159188958-d5358084-fa24-4f86-954e-b747a3b06b3a.jpeg)|
+
+ERD Mock Data 3 |	
+|:-----------------------------------:|	
+![Pic 7](https://user-images.githubusercontent.com/93271297/159188966-7e0f4fac-24f3-40bb-9e2b-3e48523f1c4a.jpeg)|
 
 # Machine Learning Model <a name="machine-learning-model"></a>
-* PCA KMeans Initial
+## Questions to answer
+* Description of preliminary data preprocessing 
+
+* Description of preliminary feature engineering
+
+* Preliminary feature selection
+	
+* Including their decision-making process 
+
+* Description of how data was split into training and testing sets 
+
+* Explanation of model choice
+
+* Include limitations and benefits
+
+## PCA KMeans Initial
 
 ## Sample structure of the Machine Learning Model <a name="sample-structure-of-the-machine-learning-model"></a> 
 NBA Season Logistical Pg 1 | | NBA Season Logistical Pg 2
 |:----------------------------------:|:-:|:-----------------------------------:|
-![Pic 5](https://user-images.githubusercontent.com/93271297/159190111-5cf01063-2bc6-4839-b9fe-bdd9ccf34378.png)| | ![Pic 6](https://user-images.githubusercontent.com/93271297/159190153-32425c4e-221e-468c-9665-dc58fdd492c0.png)|
+![Pic 8](https://user-images.githubusercontent.com/93271297/159190111-5cf01063-2bc6-4839-b9fe-bdd9ccf34378.png)| | ![Pic 9](https://user-images.githubusercontent.com/93271297/159190153-32425c4e-221e-468c-9665-dc58fdd492c0.png)|
 	
 NBA Season Logistical Pg 3 | | NBA Season Logistical Pg 4
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 5](https://user-images.githubusercontent.com/93271297/159190176-7d375dcb-13cc-4cc1-9978-e76102dca178.png)| | ![Pic 6](https://user-images.githubusercontent.com/93271297/159190207-e3ce6d97-3647-4617-ba3f-7baef91bcd9f.png)|
+![Pic 10](https://user-images.githubusercontent.com/93271297/159190176-7d375dcb-13cc-4cc1-9978-e76102dca178.png)| | ![Pic 11](https://user-images.githubusercontent.com/93271297/159190207-e3ce6d97-3647-4617-ba3f-7baef91bcd9f.png)|
 
 NBA Season Logistical Pg 5 | | NBA Season Logistical Pg 6
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 5](https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png)| | ![Pic 6](https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png)|
+![Pic 12](https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png)| | ![Pic 13](https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png)|
 
 # Exploratory Analysis <a name="exploratory-analysis"></a>
 
 3PA & Games | | Assists & Games 
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3D3PA_YLabel%3DG.jpg)| | ![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAST_YLabel%3DG.jpg)|
+![Pic 14](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3D3PA_YLabel%3DG.jpg)| | ![Pic 15](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAST_YLabel%3DG.jpg)|
 
  Age & Games | | PF & Games 
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAge_YLabel%3DG.jpg)| | ![Pic 8](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPF_YLabel%3DG.jpg)|
+![Pic 16](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAge_YLabel%3DG.jpg)| | ![Pic 17](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPF_YLabel%3DG.jpg)|
 
  PTS & Games | | TRB & Games 
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPTS_YLabel%3DG.jpg)| | ![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DTRB_YLabel%3DG.jpg)|
+![Pic 18](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPTS_YLabel%3DG.jpg)| | ![Pic 19](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DTRB_YLabel%3DG.jpg)|
 	
 Initial Top 15 Features | | Final Top 10 Features 
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 11](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Initial_Top_15_Features.jpg)|| ![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Final_Top_10_Features.jpg)|	
+![Pic 20](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Initial_Top_15_Features.jpg)|| ![Pic 21](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Final_Top_10_Features.jpg)|	
 
 Final Confusion Matrix |  
 |:-----------------------------------:|
-![Pic 11](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/FinalConfusionMatrix.jpg)
+![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/FinalConfusionMatrix.jpg)
 
 # Presentation <a name="presentation"></a>
+* Slides Presentations are drafted in Google Slides. 
+* Content - The presentation outlines the project, including the following: 
+	* Selected topic 
+	* Reason why they selected their topic 
+	* Description of their source of data 
+	* Questions they hope to answer with the data 
+	* Description of the data exploration phase of the project 
+	* Description of the analysis phase of the project
+
 (https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g11fae844228_2_85)
 
 # Dashboard <a name="dashboard"></a>
+* A blueprint for the dashboard is created and includes all of the following:
+	* Storyboard on Google Slide(s) 
+	* Description of the tool(s) that will be used to create final dashboard ✓ Description of interactive element(s)
+
 Below is a Storyboard layouts and a Mockup layouts
 ## Storyboard and Page 1 - Player Information
-![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage1.jpg)
+![Pic 23](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage1.jpg)
 
 ## Storyboard Page 2 - NBA Stats	
-![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage2.jpg)	
+![Pic 24](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage2.jpg)	
 
 ## Storyboard Page 3 - NBA News	
-![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage3.jpg)	
+![Pic 25](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage3.jpg)	
