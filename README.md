@@ -7,7 +7,7 @@
 1. [Questions to Answer](#questions-to-answer)
 1. [Project & Communication Protocols](#project-communication-protocols)
 1. [Tools](#tools)
-1. [ERD](#erd)
+1. [FSD & ERD](#fsd-&-erd)
     1. [High Level](#high-level)
     1. [NBA Stats Database](#nba-stats-database-erd)
     1. [Machine Learning ERD](#machine-learning-erd)
@@ -15,6 +15,7 @@
     1. [Sample Structure of the Database Model](#sample-structure-of-the-database-model)
 1. [Machine Learning Model](#machine-learning-model)
     1. [Sample Structure of the Machine Learning Model](#sample-structure-of-the-machine-learning-model)
+1. [Exploratory Analysis](#exploratory-analysis)
 1. [Presentation](#presentation)
 1. [Dashboard](#dashboard)
 
@@ -67,7 +68,7 @@ Database | PgAdmin4 <br /> AWS |
 Machine Learning | SciKitLearn <br /> Google CoLab <br /> Supervised Learning Model |
 Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages |
 
-# FSD & ERD <a name="erd"></a>
+# FSD & ERD <a name="fsd-&-erd"></a>
 ## High Level <a name="high-level"></a>
 ![Pic 1](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/High_Level%20ERD_r1.jpg)
 
@@ -104,6 +105,43 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 <img width="500" alt="nba_season_logistical_pg5" src="https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png">
 <img width="500" alt="nba_season_logistical_pg6" src="https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png">
 <p>
+
+# Exploratory Analysis <a name="exploratory-analysis"></a>
+<img width="700" alt="3PA & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3D3PA_YLabel%3DG.jpg">
+<figcaption align = "center"><b>Fig.1 - 3PA & Games</b></figcaption>
+</figure>
+
+<img width="700" alt="Assists & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAST_YLabel%3DG.jpg">
+<figcaption align = "center"><b>Fig.2 - Assists & Games</b></figcaption>
+</figure>
+
+<img width="700" alt="Age & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAge_YLabel%3DG.jpg">
+<figcaption align = "center"><b>Fig.3 - Age & Games</b></figcaption>
+</figure>
+
+<img width="700" alt="PF & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPF_YLabel%3DG.jpg">
+<figcaption align = "center"><b>Fig.4 - PF & Games</b></figcaption>
+</figure>
+
+<img width="700" alt="PTS & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPTS_YLabel%3DG.jpg">
+<figcaption align = "center"><b>Fig.5 - PTS & Games</b></figcaption>
+</figure>
+
+<img width="700" alt="TRB & Games" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DTRB_YLabel%3DG.jpg">
+<figcaption align = "center"><b>Fig.6 - TRB & Games</b></figcaption>
+</figure>
+
+<img width="700" alt="Initial Top 15 Features" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Initial_Top_15_Features.jpg">
+<figcaption align = "center"><b>Fig.7 - Initial Top 15 Features</b></figcaption>
+</figure>
+
+<img width="700" alt="Initial Top 10 Features" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Final_Top_10_Features.jpg">
+<figcaption align = "center"><b>Fig.8 - Final Top 10 Features</b></figcaption>
+</figure>
+
+<img width="700" alt="Final Confusion Matrix" src="https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/FinalConfusionMatrix.jpg">
+<figcaption align = "center"><b>Fig.5 - Final Confusion Matrix</b></figcaption>
+</figure>
 
 # Presentation <a name="presentation"></a>
 (https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g11fae844228_2_85)
