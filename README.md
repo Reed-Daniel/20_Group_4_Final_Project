@@ -46,17 +46,17 @@ The member in the X role will decide which technologies will be used for each st
 
 File Name |Number of Rows|Number of Columns  
 |:----------------------------------:|:-----------:|:---------:|
-Player.csv | XXXXXX | XXXXXX |
-Season_Stats.csv | XXXXXX | XXXXXX |
-Player_Data.csv | XXXXXX | XXXXXX |
+Player.csv | 3,922 | 8 |
+Season_Stats.csv | 24,690 | 52 |
+Player_Data.csv | 4,550 | 8 |
 	
 - For the purpose of our analysis we will only focus on years 1980-present as that is when the "modern" NBA began 
   
 File Name |Number of Rows|Number of Columns  
 |:----------------------------------:|:-----------:|:---------:|
-Player.csv | XXXXXX | XXXXXX |
-Season_Stats.csv | XXXXXX | XXXXXX |
-Player_Data.csv | XXXXXX | XXXXXX |
+File | XXXXXX | XXXXXX |
+File | XXXXXX | XXXXXX |
+File | XXXXXX | XXXXXX |
 
 ## Tools <a name="tools"></a>
 Systems | Tools 
@@ -93,6 +93,8 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 <p>
 
 # Machine Learning Model <a name="machine-learning-model"></a>
+* PCA KMeans Initial
+
 ## Sample structure of the Machine Learning Model <a name="sample-structure-of-the-machine-learning-model"></a> 
 <p align="center">
 <img width="500" alt="nba_season_logistical_pg1" src="https://user-images.githubusercontent.com/93271297/159190111-5cf01063-2bc6-4839-b9fe-bdd9ccf34378.png">
