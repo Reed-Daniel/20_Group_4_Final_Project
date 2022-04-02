@@ -108,8 +108,11 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 
 # Dashboard <a name="dashboard"></a>
 Below is a Storyboard layout and a Mockup layout
-## Storyboard and Page 1
+## Storyboard and Page 1 - Player Information
 ![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage1.jpg)
 
-## Storyboard Page 2	
+## Storyboard Page 2 - NBA Stats	
 ![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage2.jpg)	
+
+## Storyboard Page 3 - NBA News	
+![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage3.jpg)	
