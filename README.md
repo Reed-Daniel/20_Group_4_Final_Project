@@ -177,13 +177,14 @@ NBA Season Logistical Pg 5 | | NBA Season Logistical Pg 6
 ![Pic 12](https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png)| | ![Pic 13](https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png)|
 
 ### Additional Information on PCA KMeans
-KMeans Code 
-|:----------------------------------:|
-![Pic 26](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Code.png)| 
+The first KMeans Code diagram below shows the code for fitting the PCA into KMeans. The second KMeans Code diagrams shows that we used Allstar as the predictor variable.
+KMeans Code For Fitting the PCA | | KMeans Code Using Allstars
+|:----------------------------------:|:-:|:-----------------------------------:|
+![Pic 26](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Code.png)| | ![Pic 27](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Code2.png)|
 
 KMeans Elbow Curve | | KMeans Graph
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 27](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Elbow_Curve.png)| | ![Pic 28](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Graph.png)|
+![Pic 28](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Elbow_Curve.png)| | ![Pic 29](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Graph.png)|
 
 # Exploratory Analysis <a name="exploratory-analysis"></a>
 
