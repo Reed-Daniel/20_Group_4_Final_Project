@@ -310,14 +310,18 @@ Initial Top 15 Features | | Final Top 10 Features
 
 Final Confusion Matrix |  
 |:-----------------------------------:|
-![Pic 40](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/FinalConfusionMatrix.jpg)
+![Pic 40](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/FinalConfusionMatrix.jpg)|
 
 ### Support Vector Machine
 Spitting into Train and Test Sets
-Support Vector Machine |  Boosting Code
-|:-----------------------------------:| | :-----------------------------------:|
-![Pic 41](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/SVM_Code.png) | | ![Pic 42](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Boosting_Code.png) |
+Support Vector Machine |  
+|:-----------------------------------:|
+![Pic 41](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/SVM_Code.png)|
 	
+Boosting Code | 
+| :-----------------------------------:|
+![Pic 42](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Boosting_Code.png)|
+
 ### Random Forest 
 Spliting into Train and Test Sets
 Randon Forest Undersample Code  | Randon Forest Undersampling Complete
@@ -350,7 +354,7 @@ Exploratory Analysis (Set 2)  |
 	
 Exploratory Analysis (Set 3)  |
 |:-----------------------------------:|
-![Pic 52](hhttps://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set3.png)|
+![Pic 52](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set3.png)|
 	
 # Presentation <a name="presentation"></a>
 * Slides Presentations are drafted in Google Slides. 
