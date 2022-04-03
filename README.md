@@ -118,7 +118,6 @@ ERD Mock Data 3 |
 ![Pic 7](https://user-images.githubusercontent.com/93271297/159188966-7e0f4fac-24f3-40bb-9e2b-3e48523f1c4a.jpeg)|
 
 # Machine Learning Model <a name="machine-learning-model"></a>
-## Questions to answer
 * Description of preliminary data preprocessing: 
 We imported data from our AWS SQL database account, which had undergone an intensive ETL process. We then used the describe method in Python to analyze the central tendencies of key data features, specifically features that would be important to us later on for the supervised models (i.e., 10 of them). All features seem to have followed a normal distribution. Our analysis can be found in the "Explorartory_Analysis_Clean_Datasets.ipynb" file. We performed additional preprocessing of the data in the other jupyter notebook files that we produced for this project. All of them run the same code so if the reader will turn to the Features_Ranking_RandFrrst" file, you can see that we created data frame for all three tables used (seasons, players, and per_game) and merged them all together. From there, we separated the dataframe into two separate frames: feature set and target varaible. Our target variable was whether a player made it as an AllStar during a season while the features were the other 67 columns. For the feature set, we took out certain columns (like "id" and "team") that we thought would not be helfpul for the analysis. Afterwards, we then used the dummies variables to encode the position variable. Again this is seen in the "Features_Ranking_RandFrrst" file as well as the other 11 jupyter notebooks that we have posted. 
 * Description of preliminary feature engineering
@@ -138,7 +137,6 @@ We did preliminary feature selection through the first three files we mentioned 
 10.) Minutes Played
 
 Finally, we performed a K-Means analysis to observe more of the behavior of our top ten features in order to gain better insights. Our work can be seen in the "K_Means_Final" file. An elbow curve showed that we needed to cluster the features (which we used the first two PCAs and not all ten of them) to two centroids. We graphed the results according to AllStars. The results showed two genuinely distinct clusters for All Stars and Non-All Stars. 
-
 
 * Description of how data was split into training and testing sets 
 
@@ -163,10 +161,9 @@ Another benefit is that non-linear parameters do not hinder the performance of a
 
 Despite some of the benefits of the Random Forest model, there are limitations. One disadvantage is that the model is very complex by creating many trees which requries more computational power and resources. This might not be appropriate for every company that does not have the resoruces to perform this type of analysis. Finally, it exhibits a longer training period through all of the tree it creates and the votes that it counts to produce the outcomes. 
 
-
-## PCA KMeans Initial And Final
-
-## Sample structure of the Machine Learning Model <a name="sample-structure-of-the-machine-learning-model"></a> 
+## PCA KMeans 
+### Initial And Final
+#### Sample structure of the Machine Learning Model <a name="sample-structure-of-the-machine-learning-model"></a> 
 NBA Season Logistical Pg 1 | | NBA Season Logistical Pg 2
 |:----------------------------------:|:-:|:-----------------------------------:|
 ![Pic 8](https://user-images.githubusercontent.com/93271297/159190111-5cf01063-2bc6-4839-b9fe-bdd9ccf34378.png)| | ![Pic 9](https://user-images.githubusercontent.com/93271297/159190153-32425c4e-221e-468c-9665-dc58fdd492c0.png)|
@@ -178,6 +175,15 @@ NBA Season Logistical Pg 3 | | NBA Season Logistical Pg 4
 NBA Season Logistical Pg 5 | | NBA Season Logistical Pg 6
 |:-----------------------------------:|:-:|:-----------------------------------:|
 ![Pic 12](https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png)| | ![Pic 13](https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png)|
+
+### Additional Information on PCA KMeans
+KMeans Code 
+|:----------------------------------:|
+![Pic 26](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Code.png)| 
+
+KMeans Elbow Curve | | KMeans Graph
+|:-----------------------------------:|:-:|:-----------------------------------:|
+![Pic 27](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Elbow_Curve.png)| | ![Pic 28](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Graph.png)|
 
 # Exploratory Analysis <a name="exploratory-analysis"></a>
 
