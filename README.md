@@ -53,7 +53,29 @@ The member in the triangle role will create a mockup of a machine learning model
 The member in the circle role will create a mockup of a database with a set of sample data, or even fabricated data.  This will ensure the database will work seamlessly with the rest of the project | ○ | J. Klein | Database | I & II |
 The member in the X role will decide which technologies will be used for each step of the project | X | S. Crimi <br /> J. Klein <br /> R. Daniel <br /> | ML <br /> Database <br /> Dashboard <br />| I & II <br /> I & II <br /> II |
 
-## Tools <a name="tools"></a>
+## Technologies Used & Tools
+### Technologies Used
+#### Data Clean & Analysis
+* Pandas will be used to clean and perform exploratory analysis
+* Other Python dependencies like Numpy, Plotly, hvplot, MatPlotLib will be imported as needed to assist in our data cleaning
+
+#### Database Storage
+* PostgreSQL is where we will be storing our database
+
+#### Machine Learning
+* We used PowerBi for our preliminary data inspection to assist in determining our input variables and our desired output
+* SciKitLearn library will be used to create a classifier
+	* Balanced_accuracy_score
+	* Confusion_matrix
+	* Classification_report_imbalanced
+* Tensorflow
+
+## Dashboard
+- The dashboard will be comprised of HTML, CSS, and JavaScript components to create an interactive dashboard allowing users to select player information from drop downs fields
+- Results and visualizations will be displayed on Github pages and a Tableau dashboard if further storytelling is needed  
+
+
+### Tools <a name="tools"></a>
 Systems | Tools 
 |:--------------------------:|:---------------------------:|
 Data Cleaning & Analysis | Pandas <br /> Numpy <br /> MatPlotLib|
@@ -65,6 +87,9 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 # FSD & ERD <a name="fsd-&-erd"></a>
 ## High Level <a name="high-level"></a>
 ![Pic 1](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/High_Level%20ERD_r1.jpg)
+
+## NBA Database Schema ERD <a name="nba-database-schema ERD?></a>
+![Pic 2](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/nba-db_schema_ERD.png)
 
 ## Source Data <a name="source"></a>
 - Our source data will be taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
@@ -84,13 +109,24 @@ File | XXXXXX | XXXXXX |
 File | XXXXXX | XXXXXX |
 File | XXXXXX | XXXXXX |
 
-
 ## NBA Stats Database ERD <a name="nba-stats-database-erd"></a>
 ![Pic 2](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/NBA_Stats_DB.png)
 
+### Database Schema EX
+Database Schema | 
+|:-----------------------------------:| 
+![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/database_schema_ex.jpg) |
+
+### NBA Database - SQLAlchemy
+NBA Database - SQLAlchemy |
+|:-----------------------------------:| 
+![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/nba-db_SQLAlchemy_ex.jpg) |
+
 ## NBA Machine Learning FSD <a name="machine-learning-erd"></a>
 ### Supervised Model
-![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/SupervisedModelDiagram.jpg)
+Supervised Model | Supervised Model Performance |
+|:-----------------------------------:| |:-----------------------------------:|
+![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/SupervisedModelDiagram.jpg) | | ![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Supervised_Model_Performances.png)|
 
 ### Unsupervised Model
 ![Pic 4](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/UnsupervisedModelDiagram.jpg)
@@ -105,17 +141,53 @@ File | XXXXXX | XXXXXX |
 * Includes at least one join using the database language (not including any joins in Pandas) 
 * Includes at least one connection string (using SQLAlchemy or PyMongo) Note: If you use a SQL database, you must provide your ERD with relationships.
 
-ERD Mock Data 1 | 
-|:----------------------------------:|
-![Pic 5](https://user-images.githubusercontent.com/93271297/159188954-71be3a97-d7c8-4d2e-b09a-dad4d564d98f.jpeg)| 
+### ERD Modk Data
+ERD Mock Data 1 |	
+|:-----------------------------------:|	
+![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ERD_Mock_Data_1.jpg)|
 
 ERD Mock Data 2 |	
 |:-----------------------------------:|	
-![Pic 6](https://user-images.githubusercontent.com/93271297/159188958-d5358084-fa24-4f86-954e-b747a3b06b3a.jpeg)|
+![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ERD_Mock_Data_2.jpg)|
 
 ERD Mock Data 3 |	
 |:-----------------------------------:|	
-![Pic 7](https://user-images.githubusercontent.com/93271297/159188966-7e0f4fac-24f3-40bb-9e2b-3e48523f1c4a.jpeg)|
+![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ERD_Mock_Data_3.jpg)|
+
+### ETL Clean
+* Merge players dataframe to csv file (File downloaded players_clean.csv)
+* Modern Season Stats dataframe to csv file (File downloaded modern_season_stats_clean.csv)
+* Per game stats dataframe to csv tild (File download per_game_stats_clean.csv)
+
+ETL Clean EX | 
+|:----------------------------------:|
+![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ETL_cleaned_ex.jpg)| 
+	
+Export from QuickDBD (https://www.quickdatabasediagrams.com/), linked to schema: (https://app.quickdatbasediarmas.com/#/D/47InBZ).  Note:  If you have used non-SQL datatypes in your design, you will have to change these here. 
+
+Amazon RDS | 
+|:----------------------------------:|
+![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/database_aws_ex.jpg)| 
+
+Postgres Data Import AWS | 
+|:----------------------------------:|
+![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_Data_Import_AWS.jpg)| 
+
+Modern Season Stats - Postgres Databse Table (No Joins)| 
+|:----------------------------------:|
+![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_mod_season_stats_ex.jpg)| 
+
+Modern Season Stats - Postgres Databse Table (Join 1 - Per Game Stats)| | Modern Season Stats - Postgres Databse Table (Join 2 - On Players Stats)
+|:----------------------------------:| |:----------------------------------:|
+![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_join1_ex.jpg)| | ![Pic 8](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_join2_ex.jpg)
+
+Modern Game Stats  | Modern Season Stats
+|:----------------------------------:| |:----------------------------------:|
+![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_per_game_stats_ex.jpg)| | ![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_mod_season_stats_ex.jpg)
+
+Players  | Players2 & Position
+|:----------------------------------:| |:----------------------------------:|
+![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players_ex.jpg)| | ![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players2_ex.jpg)
 
 # Machine Learning Model <a name="machine-learning-model"></a>
 * Description of preliminary data preprocessing: 
@@ -176,18 +248,25 @@ NBA Season Logistical Pg 5 | | NBA Season Logistical Pg 6
 |:-----------------------------------:|:-:|:-----------------------------------:|
 ![Pic 12](https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png)| | ![Pic 13](https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png)|
 
-### Additional Information on PCA KMeans
+### Additional Information on PCA 
 The first KMeans Code diagram below shows the code for fitting the PCA into KMeans. The second KMeans Code diagrams shows that we used Allstar as the predictor variable.
 KMeans Code For Fitting the PCA | | KMeans Code Using Allstars
 |:----------------------------------:|:-:|:-----------------------------------:|
 ![Pic 26](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Code.png)| | ![Pic 27](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Code2.png)|
 
-KMeans Elbow Curve | | KMeans Graph
-|:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 28](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Elbow_Curve.png)| | ![Pic 29](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Graph.png)|
+KMeans Elbow Curve | PCA All PCA Curve | KMeans Graph
+|:-----------------------------------:|:-------------------------------------:|:-------------------------------------:|
+![Pic 28](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Elbow_Curve.png) | ![Pic 29](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_All_PCA_Curve.png)| ![Pic 30](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Graph.png)|
 
+PCA Ten Confusion Matrix | PCA Ten Code | PCA Ten Code2
+|:-----------------------------------:|:-------------------------------------:|:-------------------------------------:|
+![Pic 31](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_CnfsnMtrx.png) | ![Pic 32](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Code.png)| ![Pic 33](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Code2.png)|
+	
+PCA Ten Graph | PCA Ten Importance | PCA Ten Table
+|:-----------------------------------:|:-------------------------------------:|:-------------------------------------:|
+![Pic 34](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Graph.png) | ![Pic 35](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Importance.png)| ![Pic 36](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Table.png)|
+	
 # Exploratory Analysis <a name="exploratory-analysis"></a>
-
 3PA & Games | | Assists & Games 
 |:-----------------------------------:|:-:|:-----------------------------------:|
 ![Pic 14](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3D3PA_YLabel%3DG.jpg)| | ![Pic 15](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAST_YLabel%3DG.jpg)|
@@ -202,12 +281,39 @@ KMeans Elbow Curve | | KMeans Graph
 	
 Initial Top 15 Features | | Final Top 10 Features 
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 20](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Initial_Top_15_Features.jpg)|| ![Pic 21](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Final_Top_10_Features.jpg)|	
+![Pic 20](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Initial_Top_15_Features.jpg)| | ![Pic 21](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Final_Top_10_Features.jpg)|	
 
 Final Confusion Matrix |  
 |:-----------------------------------:|
 ![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/FinalConfusionMatrix.jpg)
 
+### Support Vector Machine
+Spitting into Train and Test Sets
+Support Vector Machine |  Boosting Code
+|:-----------------------------------:| | :-----------------------------------:|
+![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/SVM_Code.png) | | ![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Boosting_Code.png) |
+	
+### Random Forest 
+Spliting into Train and Test Sets
+Randon Forest Undersample Code  | Randon Forest Undersampling Complete
+|:----------------------------------:|:----------------------------------:|
+![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_Code.png)| ![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Rand_Frrst_Complete.png)|
+
+Randon Forest Undersample Confusion Matrix |  
+|:-----------------------------------:|
+![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_ConfMtrx.png)|
+
+Randon Forest Undersample Graph  | Randon Forest Undersample Top Features
+|:----------------------------------:|:----------------------------------:|
+![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_Graph.png)| ![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_TopFeatures.png)|
+
+Randon Forest Undersample Confusion Matrix |  
+|:-----------------------------------:|
+![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_ConfMtrx.png)|	
+Supervised Model Performance |
+|:-----------------------------------:|
+![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Supervised_Model_Performances.png)|	
+	
 # Presentation <a name="presentation"></a>
 * Slides Presentations are drafted in Google Slides. 
 * Content - The presentation outlines the project, including the following: 
