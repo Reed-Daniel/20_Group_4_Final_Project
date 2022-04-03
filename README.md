@@ -70,7 +70,7 @@ per_game_df.shape | 18,297 | 11 |
 #### The main branch should include: 
 * All code necessary to perform exploratory analysis 
 * Some code necessary to complete the machine learning portion of the project 
-* README.md README.md must include: 
+* README.md must include: 
 	* Description of the communication protocols 
 	* Outline of the project (this may include images, but should be easy to follow and digest).  Note: The descriptions and explanations required in all other project deliverables should also be in your README.md as part of your outline, unless otherwise noted.
 * Individual Branches 
@@ -380,7 +380,8 @@ Exploratory Analysis (Set 3)  |
 # Dashboard <a name="dashboard"></a>
 * A blueprint for the dashboard is created and includes all of the following:
 	* Storyboard on Google Slide(s) 
-	* Description of the tool(s) that will be used to create final dashboard ✓ Description of interactive element(s)
+	* Description of the tool(s) that will be used to create final dashboard 
+	Description of interactive element(s)
 
 Below is a Storyboard layouts and a Mockup layouts
 ## Storyboard and Page 1 - Player Information
