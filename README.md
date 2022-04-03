@@ -3,33 +3,65 @@
 # **Table of Contents** #
 1. [Topic](#topic)
 1. [Reason for Selecting the Topic](#reason-for-selecting-the-topic)
-1. [Source](#source)
+1. [Source Data](#source-data)
 1. [Questions to Answer](#questions-to-answer)
 1. [Project & Communication Protocols](#project-communication-protocols)
-1. [Tools](#tools)
+1. [Technologies Used & Tools](#technologies-used-&-tools)
+   1. [Technology Used](#technology-used)
+   1. [Tools](#tools)
 1. [FSD & ERD](#fsd-&-erd)
     1. [High Level](#high-level)
     1. [NBA Stats Database](#nba-stats-database-erd)
-    1. [Machine Learning ERD](#machine-learning-erd)
+    1. [Machine Learni	ng ERD](#machine-learning-erd)
+    1. [Supervised Model](#supervised-model)
+    1. [Unsupervised Model](#unsupervised-model)
 1. [Database Model](#database-model)
+    1. [Database Schema EX](#database-schema-ex)
     1. [Sample Structure of the Database Model](#sample-structure-of-the-database-model)
+    1. [ETL-Clean](#etl-clean)
 1. [Machine Learning Model](#machine-learning-model)
-    1. [Sample Structure of the Machine Learning Model](#sample-structure-of-the-machine-learning-model)
+    1. [Description of Preliminary Data Preprocessing](#description-of-premlimiary-data-preprocessing)
+    1. [Description of Preliminary Feature Engineering](#description-of-preliminary-feature-engineering)
+    1. [Preliminary Feature Selection](#preliminary-feature-selection)
+    1. [Description of How Data Was Split Into Training & Testing Sets](#description-of-how-data-was-split-into-training-&-testing-sets)
+    1. [Explanation of Model Choice, Indluce Benefits & Limitations](#explanation-of-model-choice,-indluce-benefits-&-limitations)
+    1. [File Source](#file-source)
+    2. [PCA KMeans](#pca-kmeans)
+    3. [Additional Informataion on PCA](#additional-informataion-on-PCA)
+    4. [Sample Structure of the Machine Learning Model](#sample-structure-of-the-machine-learning-model)
 1. [Exploratory Analysis](#exploratory-analysis)
 1. [Presentation](#presentation)
 1. [Dashboard](#dashboard)
 
 ## Topic <a name="topic"></a>
-- The relationship between NBA player statistics and performance over the course of the modern NBA
+* The relationship between NBA player statistics and performance over the course of the modern NBA
 
 ## Reason for Selecting Topic <a name="reason-for-selecting-the-topic"></a>
 * We would like to explore statistical data to determine if the NBA has a base-line for it's athletes, how that base line weighs against the top performers throughout the decades, and if you can predict the number of games a player would play per season
+
+## Source Data <a name="source-data"></a>
+* Our source data will be taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
+
+File Name |Number of Rows|Number of Columns  
+|:----------------------------------:|:-----------:|:---------:|
+Player.csv | 3,922 | 8 |
+Season_Stats.csv | 24,690 | 52 |
+Player_Data.csv | 4,550 | 8 |
+NBA_All_Star_Players_All.csv | 943| 7
+	
+* For the purpose of our analysis we will only focus on years 1980-present as that is when the "modern" NBA began 
+  
+File Name |Number of Rows|Number of Columns  
+|:----------------------------------:|-----------:|---------:|
+players_df.shape | 3,919 | 7 |
+seasons_df.shape | 18,297 | 52 |
+per_game_df.shape | 18,297 | 11 |
 
 ## Questions to Answer <a name="questions-to-answer"></a>
 * Does the NBA look the same decade by decade in terms of performance?
 * What does a prototypical player look like in each decade?
 	* How has that changed over time?
-- Can you determine whether a NBA Player can be an AllStar based on their season statistics? In other words, is there a quantitative way to predict whether a player will be an AllStar?
+* Can you determine whether a NBA Player can be an AllStar based on their season statistics? In other words, is there a quantitative way to predict whether a player will be an AllStar?
 
 ## Project and Communication Protocols <a name="project-communication-protocols"></a>
 * Our group maintains a steady flow of communication through Slack and our Teams page to stay updated on the status of the project deliverables as well as to coordinate additional meetings outside of class time. 
@@ -53,8 +85,8 @@ The member in the triangle role will create a mockup of a machine learning model
 The member in the circle role will create a mockup of a database with a set of sample data, or even fabricated data.  This will ensure the database will work seamlessly with the rest of the project | ○ | J. Klein | Database | I & II |
 The member in the X role will decide which technologies will be used for each step of the project | X | S. Crimi <br /> J. Klein <br /> R. Daniel <br /> | ML <br /> Database <br /> Dashboard <br />| I & II <br /> I & II <br /> II |
 
-## Technologies Used & Tools
-### Technologies Used
+## Technologies Used & Tools <a name="technologies-used-&-tools"></a>
+### Technologies Used <a name="technology-used"></a>
 #### Data Clean & Analysis
 * Pandas will be used to clean and perform exploratory analysis
 * Other Python dependencies like Numpy, Plotly, hvplot, MatPlotLib will be imported as needed to assist in our data cleaning
@@ -71,8 +103,8 @@ The member in the X role will decide which technologies will be used for each st
 * Tensorflow
 
 #### Dashboard
-- The dashboard will be comprised of HTML, CSS, and JavaScript components to create an interactive dashboard allowing users to select player information from drop downs fields
-- Results and visualizations will be displayed on Github pages and a Tableau dashboard if further storytelling is needed  
+* The dashboard will be comprised of HTML, CSS, and JavaScript components to create an interactive dashboard allowing users to select player information from drop downs fields
+* Results and visualizations will be displayed on Github pages and a Tableau dashboard if further storytelling is needed  
 
 ### Tools <a name="tools"></a>
 Systems | Tools 
@@ -87,42 +119,21 @@ Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages
 ## High Level <a name="high-level"></a>
 ![Pic 1](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/High_Level%20ERD_r1.jpg)
 
-## NBA Database Schema ERD <a name="nba-database-schema ERD?></a>
-![Pic 2](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/nba-db_schema_ERD.png)
-
-## Source Data <a name="source"></a>
-- Our source data will be taken from Kaggle and includes NBA Players Stats since 1950 in the form of csv files
-
-File Name |Number of Rows|Number of Columns  
-|:----------------------------------:|:-----------:|:---------:|
-Player.csv | 3,922 | 8 |
-Season_Stats.csv | 24,690 | 52 |
-Player_Data.csv | 4,550 | 8 |
-NBA_All_Star_Players_All.csv | 943| 7
-	
-- For the purpose of our analysis we will only focus on years 1980-present as that is when the "modern" NBA began 
-  
-File Name |Number of Rows|Number of Columns  
-|:----------------------------------:|-----------:|---------:|
-players_df.shape | 3,919 | 7 |
-seasons_df.shape | 18,297 | 52 |
-per_game_df.shape | 18,297 | 11 |
-
 ## NBA Stats Database ERD <a name="nba-stats-database-erd"></a>
-![Pic 2](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/NBA_Stats_DB.png)
+![Pic 2](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/nba-db_schema.png)
 
-### Database Schema EX
+### Database Schema EX <a name="database-schema-ex"></a>
 Database Schema | 
 |:-----------------------------------:| 
 ![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/database_schema_ex.jpg) |
 
 ## NBA Machine Learning FSD <a name="machine-learning-erd"></a>
-### Supervised Model
+### Supervised Model <a name="supervised-model"></a>
 Supervised Model | Supervised Model Performance |
 |:-----------------------------------:| |:-----------------------------------:|
 ![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/SupervisedModelDiagram.jpg) | | ![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Supervised_Model_Performances.png)|
 
-### Unsupervised Model
+### Unsupervised Model <a name="unsupervised-model"></a>
 ![Pic 4](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/UnsupervisedModelDiagram.jpg)
 
 # Database Model <a name="database-model"></a>
@@ -135,7 +146,7 @@ Supervised Model | Supervised Model Performance |
 * Includes at least one join using the database language (not including any joins in Pandas) 
 * Includes at least one connection string (using SQLAlchemy or PyMongo) Note: If you use a SQL database, you must provide your ERD with relationships.
 
-### ETL Clean
+### ETL Clean <a name="etl-clean"></a>
 * Merge players dataframe to csv file (File downloaded players_clean.csv)
 * Modern Season Stats dataframe to csv file (File downloaded modern_season_stats_clean.csv)
 * Per game stats dataframe to csv tild (File download per_game_stats_clean.csv)
@@ -181,9 +192,6 @@ Players  |
 Players with position not null |	
 |:----------------------------------:|	
 ![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players2_ex.jpg)|	
-	
-	
-
 
 ### NBA Database - SQLAlchemy
 NBA Database - SQLAlchemy |
@@ -191,11 +199,13 @@ NBA Database - SQLAlchemy |
 ![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/nba-db_SQLAlchemy_ex.jpg) |
 	
 # Machine Learning Model <a name="machine-learning-model"></a>
-* Description of preliminary data preprocessing: 
+## Description of preliminary data preprocessing <a name="description-of-premlimiary-data-preprocessing"></a>
 We imported data from our AWS SQL database account, which had undergone an intensive ETL process. We then used the describe method in Python to analyze the central tendencies of key data features, specifically features that would be important to us later on for the supervised models (i.e., 10 of them). All features seem to have followed a normal distribution. Our analysis can be found in the "Explorartory_Analysis_Clean_Datasets.ipynb" file. We performed additional preprocessing of the data in the other jupyter notebook files that we produced for this project. All of them run the same code so if the reader will turn to the Features_Ranking_RandFrrst" file, you can see that we created data frame for all three tables used (seasons, players, and per_game) and merged them all together. From there, we separated the dataframe into two separate frames: feature set and target varaible. Our target variable was whether a player made it as an AllStar during a season while the features were the other 67 columns. For the feature set, we took out certain columns (like "id" and "team") that we thought would not be helfpul for the analysis. Afterwards, we then used the dummies variables to encode the position variable. Again this is seen in the "Features_Ranking_RandFrrst" file as well as the other 11 jupyter notebooks that we have posted. 
-* Description of preliminary feature engineering
+
+## Description of preliminary feature engineering <a name="description-of-preliminary-feature-engineering"></a>
 For the preliminary feature engineering, wesplit the remaining data set into X_train, X_test, y_train, and y_test. We did a 75%/25% split for testing and training sets for ALL FILES. Again if the reader scrolls down "Features_Ranking_RandFrrst", then you can see the code that we used to perform this task.  We then standardized the feature sets for both the training and testing sets. This was important because many of the values were different (heights, points, ages, etc.) and so we needed a way to normalize them so that the analysis would not be affected degrees of magnitude for certain variables (for instance, season points is in the 1000s for most players and so changes in that variable would have a more dominate effect on the target than changes in age which are in increments of 1 per change of season had). Finally, because this first random forrest model's confusion matrix showed signs of lopsided representation of non-All Starrs (i.e., NBA players who did not make the AllStar team), we had to create two separate notebooks for under- and over-sampling to do our best to counteract this effect. If you compare the confusion matrices of both notebooks, you can see that under-sampling performed better with accuracy and recall and so we went with this pre-processing method for ALL OF OUR SUPERVISED AND UNSUPERVISED MODELS.
-* Preliminary feature selection
+
+## Preliminary feature selection<a name="preliminary-feature-selection"></a>
 We did preliminary feature selection through the first three files we mentioned ("Features_Ranking_RandFrrst", "Features...UnderSample", and "Features..."Oversample) where we ranked the top features that provided the most explanatory value of the target variable, AllStars. If the reader scrolls down for each file, you can see the rankings and how some of them are different from one another. We did not settle on these rankings, however. From our udnerstanding, the math was not adequate enough and so we needed something more comprehensive and decided to use Principal Components Analysis, a features extraction method for reducing the features set. Please open both files "PCA_Initial" and "PCA_Final". PCA Initial takes our inital featrue set of about 67 columns and helps us reduce the number to 10. These ten features explain almost 80% fo the variation in the target variable.  We provided a chart showing this pehnomenon as well as a table with the cumulative variance ratios and explained variance ratios for each of the first top ten PCAs. The second file, "PCA_Final", helps us identify WHICH OF THE TEN FEATURES EXPLAINS MOST OF THE VARIATION OF THE TARGET VARIABLE. We provide a table and chart showing their relative importances within the notebook. The following features represent our top ten variables and are presented in the order of importance: 
 
 1.) Age
@@ -211,11 +221,11 @@ We did preliminary feature selection through the first three files we mentioned 
 
 Finally, we performed a K-Means analysis to observe more of the behavior of our top ten features in order to gain better insights. Our work can be seen in the "K_Means_Final" file. An elbow curve showed that we needed to cluster the features (which we used the first two PCAs and not all ten of them) to two centroids. We graphed the results according to AllStars. The results showed two genuinely distinct clusters for All Stars and Non-All Stars. 
 
-* Description of how data was split into training and testing sets 
+## Description of how data was split into training and testing sets <a name="description-of-how-data-was-split-into-training-&-testing-sets"></a>
 
 Again, for ALL OF OUR ANALYSES, we split the data 75%/25% for training and testing data sets for our models. This occurred for both the unsupervised and supervised portions of our analyses. All models were undersampled during this process as well.
 
-* Explanation of model choice, indluce benefits and limitations.
+## Explanation of model choice, indluce benefits and limitations <a name="explanation-of-model-choice,-indluce-benefits-&-limitations"></a>
 We underwent created five supervised models for our analyses:
 
 1.) Logistical Regression
@@ -234,7 +244,21 @@ Another benefit is that non-linear parameters do not hinder the performance of a
 
 Despite some of the benefits of the Random Forest model, there are limitations. One disadvantage is that the model is very complex by creating many trees which requries more computational power and resources. This might not be appropriate for every company that does not have the resoruces to perform this type of analysis. Finally, it exhibits a longer training period through all of the tree it creates and the votes that it counts to produce the outcomes. 
 
-## PCA KMeans 
+## File Source <a name="file-source"></a>
+1. Features_Ranking RandFrrst.ipynb
+2. Features_Ranking_RandFrrst_OverSample.ipynb
+3. Features_Ranking_RandFrrst_UnderSample.ipynb
+4. K_Means_Final.ipynb
+5. Logistical_Regression.ipynb
+6. PCA_Final.ipynb
+7. PCA_Initial.ipynb
+8. Random_Forrest_Complete.ipynb
+9. Support_Vector_Machine.ipynb
+10. Decision_Tree.ipynb
+11. Exploratory_Analysis_Clean_Datasets.ipynb
+12. Boosting.ipynb
+
+## PCA KMeans <a name="pca-kmeans"></a> 
 ### Initial And Final
 #### Sample structure of the Machine Learning Model <a name="sample-structure-of-the-machine-learning-model"></a> 
 NBA Season Logistical Pg 1 | | NBA Season Logistical Pg 2
@@ -249,7 +273,7 @@ NBA Season Logistical Pg 5 | | NBA Season Logistical Pg 6
 |:-----------------------------------:|:-:|:-----------------------------------:|
 ![Pic 12](https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png)| | ![Pic 13](https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png)|
 
-### Additional Information on PCA 
+### Additional Information on PCA <a name="additional-informataion-on-PCA"></a>
 The first KMeans Code diagram below shows the code for fitting the PCA into KMeans. The second KMeans Code diagrams shows that we used Allstar as the predictor variable.
 KMeans Code For Fitting the PCA | | KMeans Code Using Allstars
 |:----------------------------------:|:-:|:-----------------------------------:|
