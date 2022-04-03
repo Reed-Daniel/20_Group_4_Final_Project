@@ -136,19 +136,6 @@ Supervised Model | Supervised Model Performance |
 * Includes at least one join using the database language (not including any joins in Pandas) 
 * Includes at least one connection string (using SQLAlchemy or PyMongo) Note: If you use a SQL database, you must provide your ERD with relationships.
 
-### ERD Modk Data
-ERD Mock Data 1 |	
-|:-----------------------------------:|	
-![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ERD_Mock_Data_1.jpg)|
-
-ERD Mock Data 2 |	
-|:-----------------------------------:|	
-![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ERD_Mock_Data_2.jpg)|
-
-ERD Mock Data 3 |	
-|:-----------------------------------:|	
-![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ERD_Mock_Data_3.jpg)|
-
 ### ETL Clean
 * Merge players dataframe to csv file (File downloaded players_clean.csv)
 * Modern Season Stats dataframe to csv file (File downloaded modern_season_stats_clean.csv)
@@ -188,14 +175,16 @@ Modern Season Stats |
 |:----------------------------------:|
 ![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_mod_season_stats_ex.jpg)|
 	
-Players2 & Position |	
+Players  | 
+|:----------------------------------:|
+![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players_ex.jpg)|
+	
+Players with position not null |	
 |:----------------------------------:|	
 ![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players2_ex.jpg)|	
 	
 	
-Players  | 
-|:----------------------------------:|
-![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players_ex.jpg)|
+
 
 ### NBA Database - SQLAlchemy
 NBA Database - SQLAlchemy |
