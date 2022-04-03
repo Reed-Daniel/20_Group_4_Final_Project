@@ -74,7 +74,6 @@ The member in the X role will decide which technologies will be used for each st
 - The dashboard will be comprised of HTML, CSS, and JavaScript components to create an interactive dashboard allowing users to select player information from drop downs fields
 - Results and visualizations will be displayed on Github pages and a Tableau dashboard if further storytelling is needed  
 
-
 ### Tools <a name="tools"></a>
 Systems | Tools 
 |:--------------------------:|:---------------------------:|
@@ -104,10 +103,10 @@ NBA_All_Star_Players_All.csv | 943| 7
 - For the purpose of our analysis we will only focus on years 1980-present as that is when the "modern" NBA began 
   
 File Name |Number of Rows|Number of Columns  
-|:----------------------------------:|:-----------:|:---------:|
-File | XXXXXX | XXXXXX |
-File | XXXXXX | XXXXXX |
-File | XXXXXX | XXXXXX |
+|:----------------------------------:|-----------:|---------:|
+players_df.shape | 3,919 | 7 |
+seasons_df.shape | 18,297 | 52 |
+per_game_df.shape | 18,297 | 11 |
 
 ## NBA Stats Database ERD <a name="nba-stats-database-erd"></a>
 ![Pic 2](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/NBA_Stats_DB.png)
