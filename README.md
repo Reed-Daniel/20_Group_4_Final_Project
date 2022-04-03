@@ -29,8 +29,7 @@
 * Does the NBA look the same decade by decade in terms of performance?
 * What does a prototypical player look like in each decade?
 	* How has that changed over time?
-- Can you predict the number of games a player will play in a season based on their statistics?
-	* Does decade have an impact of number of games played?
+- Can you determine whether a NBA Player can be an AllStar based on their season statistics? In other words, is there a quantitative way to predict whether a player will be an AllStar?
 
 ## Project and Communication Protocols <a name="project-communication-protocols"></a>
 * Our group maintains a steady flow of communication through Slack and our Teams page to stay updated on the status of the project deliverables as well as to coordinate additional meetings outside of class time. 
@@ -75,6 +74,7 @@ File Name |Number of Rows|Number of Columns
 Player.csv | 3,922 | 8 |
 Season_Stats.csv | 24,690 | 52 |
 Player_Data.csv | 4,550 | 8 |
+NBA_All_Star_Players_All.csv | 943| 7
 	
 - For the purpose of our analysis we will only focus on years 1980-present as that is when the "modern" NBA began 
   
@@ -119,21 +119,52 @@ ERD Mock Data 3 |
 
 # Machine Learning Model <a name="machine-learning-model"></a>
 ## Questions to answer
-* Description of preliminary data preprocessing 
-
+* Description of preliminary data preprocessing: 
+We imported data from our AWS SQL database account, which had undergone an intensive ETL process. We then used the describe method in Python to analyze the central tendencies of key data features, specifically features that would be important to us later on for the supervised models (i.e., 10 of them). All features seem to have followed a normal distribution. Our analysis can be found in the "Explorartory_Analysis_Clean_Datasets.ipynb" file. We performed additional preprocessing of the data in the other jupyter notebook files that we produced for this project. All of them run the same code so if the reader will turn to the Features_Ranking_RandFrrst" file, you can see that we created data frame for all three tables used (seasons, players, and per_game) and merged them all together. From there, we separated the dataframe into two separate frames: feature set and target varaible. Our target variable was whether a player made it as an AllStar during a season while the features were the other 67 columns. For the feature set, we took out certain columns (like "id" and "team") that we thought would not be helfpul for the analysis. Afterwards, we then used the dummies variables to encode the position variable. Again this is seen in the "Features_Ranking_RandFrrst" file as well as the other 11 jupyter notebooks that we have posted. 
 * Description of preliminary feature engineering
-
+For the preliminary feature engineering, wesplit the remaining data set into X_train, X_test, y_train, and y_test. We did a 75%/25% split for testing and training sets for ALL FILES. Again if the reader scrolls down "Features_Ranking_RandFrrst", then you can see the code that we used to perform this task.  We then standardized the feature sets for both the training and testing sets. This was important because many of the values were different (heights, points, ages, etc.) and so we needed a way to normalize them so that the analysis would not be affected degrees of magnitude for certain variables (for instance, season points is in the 1000s for most players and so changes in that variable would have a more dominate effect on the target than changes in age which are in increments of 1 per change of season had). Finally, because this first random forrest model's confusion matrix showed signs of lopsided representation of non-All Starrs (i.e., NBA players who did not make the AllStar team), we had to create two separate notebooks for under- and over-sampling to do our best to counteract this effect. If you compare the confusion matrices of both notebooks, you can see that under-sampling performed better with accuracy and recall and so we went with this pre-processing method for ALL OF OUR SUPERVISED AND UNSUPERVISED MODELS.
 * Preliminary feature selection
-	
-* Including their decision-making process 
+We did preliminary feature selection through the first three files we mentioned ("Features_Ranking_RandFrrst", "Features...UnderSample", and "Features..."Oversample) where we ranked the top features that provided the most explanatory value of the target variable, AllStars. If the reader scrolls down for each file, you can see the rankings and how some of them are different from one another. We did not settle on these rankings, however. From our udnerstanding, the math was not adequate enough and so we needed something more comprehensive and decided to use Principal Components Analysis, a features extraction method for reducing the features set. Please open both files "PCA_Initial" and "PCA_Final". PCA Initial takes our inital featrue set of about 67 columns and helps us reduce the number to 10. These ten features explain almost 80% fo the variation in the target variable.  We provided a chart showing this pehnomenon as well as a table with the cumulative variance ratios and explained variance ratios for each of the first top ten PCAs. The second file, "PCA_Final", helps us identify WHICH OF THE TEN FEATURES EXPLAINS MOST OF THE VARIATION OF THE TARGET VARIABLE. We provide a table and chart showing their relative importances within the notebook. The following features represent our top ten variables and are presented in the order of importance: 
+
+1.) Age
+2.) True Shooting %
+3.) Games Played
+4.) Defensive Rebounding rate %
+5.) Player Efficiency Rating (PER)
+6.) Games Started during the regular season
+7.) Three points attempted rate
+8.) Offensive Rebounding rate %
+9.) Free Throw Rate
+10.) Minutes Played
+
+Finally, we performed a K-Means analysis to observe more of the behavior of our top ten features in order to gain better insights. Our work can be seen in the "K_Means_Final" file. An elbow curve showed that we needed to cluster the features (which we used the first two PCAs and not all ten of them) to two centroids. We graphed the results according to AllStars. The results showed two genuinely distinct clusters for All Stars and Non-All Stars. 
+
 
 * Description of how data was split into training and testing sets 
 
-* Explanation of model choice
+Again, for ALL OF OUR ANALYSES, we split the data 75%/25% for training and testing data sets for our models. This occurred for both the unsupervised and supervised portions of our analyses. All models were undersampled during this process as well.
 
-* Include limitations and benefits
+* Explanation of model choice, indluce benefits and limitations.
+We underwent created five supervised models for our analyses:
 
-## PCA KMeans Initial
+1.) Logistical Regression
+2.) Support Vector Machine
+3.) Decision Tree
+4.) Random Forest (with the top ten features this time)
+5.) Boosting
+
+We chose these five models because they were suitable for binary classification (Will this NBA player be an AllStar or not?). For each supervised model, we USED THE TOP TEN FEATURES ACCORDING TO OUR UNSUPERVISED MODELS. We produced confusion matrices for all five supervised models. The accuracies were around 91%, which was high, and the recall, was around 92%, which is also high. We chose recall over precision because we thought that minimizing mislabeling a NBA AllStar as a non-AllStar was more important than the other scenario (i.e., mislabeling a non-AllStar as an All-Star). Our logic for this decision lies in the fact that if the NBA were to hire us to plan for the next AllStar game and we had a high rate of mislabeling AllStars then we miss making the preparations necessary for that player to attend the game, which would anger fans and decrease viewership. 
+
+You can see all model performances in each of their files as well as a summary of them in an image below. Though there were no major discrepancies amongst the models in their performances (except for decision tree maybe), we chose random forest again (but this time with the top ten features) because it had the highest accuracy (92%) and recall values (94%). Please note: there are two separate recall values for NBA AllStars and non-NBA AllStars. When we were previously discussing recall, we were referring to the recall for NBA AllStars. 
+
+One of the benefits of using a random forest model is that it is based on a bagging algorithm and uses and Ensemble Learning technique, whihc menas it creates many trees on the subset of data and combines the output of all trees. This method helps reduce the overfitting problem that we mentioned earleir that we concerned about (because there are way more non-AllStars than AllStars, it would naturally be easier to predict the former than the later) as well as reducing the variance and imrpoving accuracy (which is high at 92%).
+
+Another benefit is that non-linear parameters do not hinder the performance of a Random Forest, which means it can outperform other models. And finally, Random Forests are very robust against outliers which we are certain are contained within the feature set. 
+
+Despite some of the benefits of the Random Forest model, there are limitations. One disadvantage is that the model is very complex by creating many trees which requries more computational power and resources. This might not be appropriate for every company that does not have the resoruces to perform this type of analysis. Finally, it exhibits a longer training period through all of the tree it creates and the votes that it counts to produce the outcomes. 
+
+
+## PCA KMeans Initial And Final
 
 ## Sample structure of the Machine Learning Model <a name="sample-structure-of-the-machine-learning-model"></a> 
 NBA Season Logistical Pg 1 | | NBA Season Logistical Pg 2
