@@ -70,7 +70,7 @@ The member in the X role will decide which technologies will be used for each st
 	* Classification_report_imbalanced
 * Tensorflow
 
-## Dashboard
+#### Dashboard
 - The dashboard will be comprised of HTML, CSS, and JavaScript components to create an interactive dashboard allowing users to select player information from drop downs fields
 - Results and visualizations will be displayed on Github pages and a Tableau dashboard if further storytelling is needed  
 
@@ -116,11 +116,6 @@ File | XXXXXX | XXXXXX |
 Database Schema | 
 |:-----------------------------------:| 
 ![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/database_schema_ex.jpg) |
-
-### NBA Database - SQLAlchemy
-NBA Database - SQLAlchemy |
-|:-----------------------------------:| 
-![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/nba-db_SQLAlchemy_ex.jpg) |
 
 ## NBA Machine Learning FSD <a name="machine-learning-erd"></a>
 ### Supervised Model
@@ -174,21 +169,39 @@ Postgres Data Import AWS |
 ![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_Data_Import_AWS.jpg)| 
 
 Modern Season Stats - Postgres Databse Table (No Joins)| 
-|:----------------------------------:|
+|:------------------------------------------------------:|
 ![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_mod_season_stats_ex.jpg)| 
 
-Modern Season Stats - Postgres Databse Table (Join 1 - Per Game Stats)| | Modern Season Stats - Postgres Databse Table (Join 2 - On Players Stats)
-|:----------------------------------:| |:----------------------------------:|
-![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_join1_ex.jpg)| | ![Pic 8](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_join2_ex.jpg)
+Modern Season Stats - Postgres Databse Table (Join 1 - Per Game Stats)| 
+|:----------------------------------:|
+![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_join1_ex.jpg)| 
 
-Modern Game Stats  | Modern Season Stats
-|:----------------------------------:| |:----------------------------------:|
-![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_per_game_stats_ex.jpg)| | ![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_mod_season_stats_ex.jpg)
+Modern Season Stats - Postgres Databse Table (Join 2 - On Players Stats)|
+|:----------------------------------:|
+![Pic 8](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_join2_ex.jpg)|
 
-Players  | Players2 & Position
-|:----------------------------------:| |:----------------------------------:|
-![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players_ex.jpg)| | ![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players2_ex.jpg)
+Modern Game Stats |
+|:----------------------------------:| 
+![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_per_game_stats_ex.jpg)|
 
+Modern Season Stats |
+|:----------------------------------:|
+![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_mod_season_stats_ex.jpg)|
+	
+Players2 & Position |	
+|:----------------------------------:|	
+![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players2_ex.jpg)|	
+	
+	
+Players  | 
+|:----------------------------------:|
+![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players_ex.jpg)|
+
+### NBA Database - SQLAlchemy
+NBA Database - SQLAlchemy |
+|:-----------------------------------:| 
+![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/nba-db_SQLAlchemy_ex.jpg) |
+	
 # Machine Learning Model <a name="machine-learning-model"></a>
 * Description of preliminary data preprocessing: 
 We imported data from our AWS SQL database account, which had undergone an intensive ETL process. We then used the describe method in Python to analyze the central tendencies of key data features, specifically features that would be important to us later on for the supervised models (i.e., 10 of them). All features seem to have followed a normal distribution. Our analysis can be found in the "Explorartory_Analysis_Clean_Datasets.ipynb" file. We performed additional preprocessing of the data in the other jupyter notebook files that we produced for this project. All of them run the same code so if the reader will turn to the Features_Ranking_RandFrrst" file, you can see that we created data frame for all three tables used (seasons, players, and per_game) and merged them all together. From there, we separated the dataframe into two separate frames: feature set and target varaible. Our target variable was whether a player made it as an AllStar during a season while the features were the other 67 columns. For the feature set, we took out certain columns (like "id" and "team") that we thought would not be helfpul for the analysis. Afterwards, we then used the dummies variables to encode the position variable. Again this is seen in the "Features_Ranking_RandFrrst" file as well as the other 11 jupyter notebooks that we have posted. 
