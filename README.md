@@ -153,7 +153,7 @@ Supervised Model | Supervised Model Performance |
 
 5 steps: 	
 * 1) Perform data cleaning and output ETL documents 
-* 2) Load created schema into Postgres via pgAdmin
+* 2) Load schema into Postgres via pgAdmin using NBA Stats Database ERD
 * 3) Upload data into PostgreSQL database
 * 4) Create AWS RDS and connect to PostgreSQL
 * 5) Connect AWS RDS to Python with SQLAlchemy	
