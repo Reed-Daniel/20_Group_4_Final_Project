@@ -146,57 +146,66 @@ Supervised Model | Supervised Model Performance |
 * Includes at least one join using the database language (not including any joins in Pandas) 
 * Includes at least one connection string (using SQLAlchemy or PyMongo) Note: If you use a SQL database, you must provide your ERD with relationships.
 
-### ETL Clean <a name="etl-clean"></a>
+### ETL, Postgres, Amazon AWS <a name="etl-clean"></a>
 * Merge players dataframe to csv file (File downloaded players_clean.csv)
 * Modern Season Stats dataframe to csv file (File downloaded modern_season_stats_clean.csv)
 * Per game stats dataframe to csv tild (File download per_game_stats_clean.csv)
 
-ETL Clean EX | 
+5 steps: 	
+* 1) Perform data cleaning and output ETL documents 
+* 2) Load created schema into Postgres via pgAdmin
+* 3) Upload data into PostgreSQL database
+* 4) Create AWS RDS and connect to PostgreSQL
+* 5) Connect AWS RDS to Python with SQLAlchemy	
+	
+	
+ (1) ETL Clean Data Ready For Export to Postgres | 
 |:----------------------------------:|
-![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ETL_cleaned_ex.jpg)| 
+![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ETL_cleaned_ex.jpg)| 
 	
 Export from QuickDBD (https://www.quickdatabasediagrams.com/), linked to schema: (https://app.quickdatbasediarmas.com/#/D/47InBZ).  Note:  If you have used non-SQL datatypes in your design, you will have to change these here. 
 
-Amazon RDS | 
+(3a) Players  | 
 |:----------------------------------:|
-![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/database_aws_ex.jpg)| 
-
-Postgres Data Import AWS | 
-|:----------------------------------:|
-![Pic 8](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_Data_Import_AWS.jpg)| 
-
-Modern Season Stats - Postgres Databse Table (No Joins)| 
-|:------------------------------------------------------:|
-![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_mod_season_stats_ex.jpg)| 
-
-Modern Season Stats - Postgres Databse Table (Join 1 - Per Game Stats)| 
-|:----------------------------------:|
-![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_join1_ex.jpg)| 
-
-Modern Season Stats - Postgres Databse Table (Join 2 - On Players Stats)|
-|:----------------------------------:|
-![Pic 11](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_join2_ex.jpg)|
-
-Modern Game Stats |
-|:----------------------------------:| 
-![Pic 12](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_per_game_stats_ex.jpg)|
-
-Modern Season Stats |
-|:----------------------------------:|
-![Pic 13](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_mod_season_stats_ex.jpg)|
+![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players_ex.jpg)|
 	
-Players  | 
-|:----------------------------------:|
-![Pic 14](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players_ex.jpg)|
-	
-Players with position not null |	
+(3b) Players with position not null |	
 |:----------------------------------:|	
-![Pic 15](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players2_ex.jpg)|	
+![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_players2_ex.jpg)|	
+
+(3c) Per-game Stats |
+|:----------------------------------:| 
+![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_per_game_stats_ex.jpg)|
+
+(3d) Modern Season Stats |
+|:----------------------------------:|
+![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_mod_season_stats_ex.jpg)|
+	
+(3e) Modern Season Stats - Postgres Databse Table (No Joins)| 
+|:------------------------------------------------------:|
+![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_mod_season_stats_ex.jpg)| 
+
+(3f) Modern Season Stats - Postgres Databse Table (Join 1 - Per Game Stats)| 
+|:----------------------------------:|
+![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_join1_ex.jpg)| 
+
+(3g) Modern Season Stats - Postgres Databse Table (Join 2 - On Players Stats)|
+|:----------------------------------:|
+![Pic 8](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_join2_ex.jpg)|
+	
+(4a) Amazon RDS Overview | 
+|:----------------------------------:|
+![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/database_aws_ex.jpg)| 
+
+(4b) Loading Postgres Data to AWS RDS | 
+|:----------------------------------:|
+![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_Data_Import_AWS.jpg)| 	
+
 
 ### NBA Database - SQLAlchemy
-NBA Database - SQLAlchemy |
+(5) NBA Database - SQLAlchemy |
 |:-----------------------------------:| 
-![Pic 16](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/nba-db_SQLAlchemy_ex.jpg) |
+![Pic 3](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/nba-db_SQLAlchemy_ex.jpg) |
 	
 # Machine Learning Model <a name="machine-learning-model"></a>
 ## Description of preliminary data preprocessing <a name="description-of-premlimiary-data-preprocessing"></a>
