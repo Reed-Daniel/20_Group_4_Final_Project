@@ -375,7 +375,7 @@ Exploratory Analysis (Set 3)  |
 	* Description of the data exploration phase of the project 
 	* Description of the analysis phase of the project
 
-(https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g11fae844228_2_85)
+(https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g12146d41cc0_0_80)
 
 # Dashboard <a name="dashboard"></a>
 * A blueprint for the dashboard is created and includes all of the following:
