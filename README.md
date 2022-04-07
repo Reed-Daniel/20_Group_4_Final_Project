@@ -129,8 +129,6 @@ Database Schema |
 
 ## NBA Machine Learning FSD <a name="machine-learning-erd"></a>
 ### Supervised Model <a name="supervised-model"></a>
-Supervised Model | Supervised Model Performance |
-|:-----------------------------------:| |:-----------------------------------:|
 ![Pic 4](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/SupervisedModelDiagram.jpg) | | ![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Supervised_Model_Performances.png)|
 
 ### Unsupervised Model <a name="unsupervised-model"></a>
