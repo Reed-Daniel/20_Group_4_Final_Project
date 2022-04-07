@@ -1,4 +1,4 @@
-[Pic 0](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Dashboard/images/NBA_Greats.jpg)
+![Pic 0](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Dashboard/images/NBA_Greats.jpg)
 
 # NBA Player Statistics & Performance Over the Course of the Modern NBA
 # Group 4 Final Project
