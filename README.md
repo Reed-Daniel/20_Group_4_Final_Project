@@ -12,7 +12,7 @@
 1. [FSD & ERD](#fsd-&-erd)
     1. [High Level](#high-level)
     1. [NBA Stats Database](#nba-stats-database-erd)
-    1. [Machine Learni	ng ERD](#machine-learning-erd)
+    1. [Machine Learning ERD](#machine-learning-erd)
     1. [Supervised Model](#supervised-model)
     1. [Unsupervised Model](#unsupervised-model)
 1. [Database Model](#database-model)
