@@ -12,11 +12,17 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body style="background-color:cornflowerblue;">
     <div class="wrapper">
-        <nav class="navbar navbar-light navbar-expand-lg" style="background-color:cornflowerblue;">
-            <a class="navbar-brand" href="index_2.html">NBA Prime Time!</a>
+        <nav class="navbar" style="background-color:cornflowerblue;">
+          <ol>
+            <li class="player"><a href="index_2.html">Home</a></li>
+            <li class="player"><a href="project.html">Project Overview</a></li>
+            <li class="player"><a href="team.html">Meet the Team</a></li>
+          </ol>
         </nav>
     </div>
     <div class="jumbotron">
@@ -34,7 +40,7 @@
             </p1>
           </div>
           <div class="col-md-1">
-            <img src="https://i.pinimg.com/564x/a3/7f/1e/a37f1eda0a39f449985de01f87de0449.jpg" alt="hoop" width="250" height="250">
+            <img src="https://i.pinimg.com/564x/a3/7f/1e/a37f1eda0a39f449985de01f87de0449.jpg" alt="hoop" width="300" height="250">
           </div>
           <div class="col-md-2">
             <div class="basketball">
@@ -117,24 +123,52 @@
                 </table>
             </div>
         </div>
-        <div class="row"> 
-            <div class="col-md-2">
-                <div class="well" style="border:2px solid black; background-color: info;">
-                  <h5>Player Name:</h5>
-                  <!-- <select id="selDataset"></select> -->
-                  <select id="selDataset" onchange="optionChanged(this.value)"></select>
-                </div>
-                <div class="panel panel-primary" style="border:2px solid black; background-color: info;">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">Player Info</h3>
-                  </div>
-                  <div id="sample-metadata" class="panel-body"></div>
-                </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3">
+              <p style="font-size:30px">STAT SCALE</p>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" step="10" list="steplist" class="slider" id="gamesPlayed">
+                <datalist id="steplist">
+                  <option>0</option>
+                  <option>10</option>
+                  <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                  <option>60</option>
+                  <option>70</option>
+                  <option>80</option>
+                  <option>90</option>
+                  <option>100</option>
+                </datalist>
+                <label for="gamesPlayed">Games Played</label>
               </div>
-        </div>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="points">
+                <label for="points">Points</label>
+              </div>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="assists">
+                <label for="assists">Assists</label>
+              </div>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="steals">
+                <label for="steals">Steals</label>
+              </div>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="rebounds">
+                <label for="rebounds">Rebounds</label>
+              </div>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="otherStat">
+                <label for="otherStat">Other Stat</label>
+              </div>
+            </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
     <script src="static/js/data.js"></script>
     <script src="static/js/app.js"></script>
+    <script src="static/js/script.js"></script>
 </body>
 </html>
