@@ -395,5 +395,6 @@ Below is a Storyboard layouts and a Mockup layouts
 ![Pic 55](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage3.jpg)
 
 # References <a name="references"></a>
-
+* Kaggle - NBA Game Data - Players.csv(https://www.kaggle.com/datasets/nathanlauga/nba-games?select=players.csv&msclkid=1ac414e3b79411eca127c4f5fc6f0cf5)
+* Kaggle - Python · NBA Players Seasons Stats since 1950 - season-stats.csv(https://www.kaggle.com/code/samlow1/season-stats/data)
 
