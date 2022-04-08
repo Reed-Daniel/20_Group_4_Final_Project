@@ -1,3 +1,9 @@
+// import the data from data.js
+const tableData = data;
+
+// Reference the HTML table using d3
+var tbody = d3.select("tbody");
+
 function buildTable(data) {
   // First, clear out any existing data
   tbody.html("");
@@ -20,14 +26,14 @@ function buildTable(data) {
 
 function handleClick() {
   // Grab the name value from the filter
-  let date = d3.select("#name").property("value");
+  let names = d3.select("#name").property("value");
   let filteredData = tableData;
 
    // Check to see if a name was entered and filter the
   // data using that name.
   if (names) {
     // Apply `filter` to the table data to only keep the
-    // rows where the `datetime` value matches the filter value
+    // rows where the `name` value matches the filter value
     filteredData = filteredData.filter(row => row.name === names);
   };
 
@@ -42,3 +48,12 @@ d3.selectAll("#filter-btn").on("click", handleClick);
 
 // Build the table when the page loads
 buildTable(tableData);
+
+// dynamic range slider to show current value
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}

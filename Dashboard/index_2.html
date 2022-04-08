@@ -82,7 +82,7 @@
                               <input type="text" placeholder="200" id="weight" size="18"/>
                         </li><br>
                         <li class = "list-group-item" style="background-color:cornflowerblue;">
-                            <label for="shape">Enter Stat</label><br>
+                            <label for="steals">Enter Steals</label><br>
                               <input type="text" placeholder="points" id="points" size="18"/>
                         </li>
                     </ul>
@@ -128,40 +128,33 @@
             <div class="col-md-3">
               <p style="font-size:30px">STAT SCALE</p>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" step="10" list="steplist" class="slider" id="gamesPlayed">
-                <datalist id="steplist">
-                  <option>0</option>
-                  <option>10</option>
-                  <option>20</option>
-                  <option>30</option>
-                  <option>40</option>
-                  <option>50</option>
-                  <option>60</option>
-                  <option>70</option>
-                  <option>80</option>
-                  <option>90</option>
-                  <option>100</option>
-                </datalist>
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <h5>Value: <span id="demo"></span></h5>
                 <label for="gamesPlayed">Games Played</label>
               </div>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="points">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <h5>Value: <span id="demo"></span></h5>
                 <label for="points">Points</label>
               </div>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="assists">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <h5>Value: <span id="demo"></span></h5>
                 <label for="assists">Assists</label>
               </div>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="steals">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <h5>Value: <span id="demo"></span></h5>
                 <label for="steals">Steals</label>
               </div>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="rebounds">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <h5>Value: <span id="demo"></span></h5>
                 <label for="rebounds">Rebounds</label>
               </div>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="otherStat">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <h5>Value: <span id="demo"></span></h5>
                 <label for="otherStat">Other Stat</label>
               </div>
             </div>
@@ -169,6 +162,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
     <script src="static/js/data.js"></script>
     <script src="static/js/app.js"></script>
-    <script src="static/js/script.js"></script>
 </body>
 </html>

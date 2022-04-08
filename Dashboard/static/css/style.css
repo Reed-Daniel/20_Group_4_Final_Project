@@ -46,6 +46,12 @@ body {
     text-align: center;
   }
 
+  h5 {
+    color: white;
+    font-size: 12px;
+    font-family: "Garamond", Garamond, serif;
+  }
+
   h6 {
     text-align: center;
   }
@@ -172,15 +178,6 @@ body {
     75% {transform: scaleX(0.7);}
     100% {transform: scaleX(1);}
   }
-
-
-
-
-
-
-
-
-
 
   .slidecontainer {
     width: 100%;
