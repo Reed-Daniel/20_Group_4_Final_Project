@@ -33,7 +33,8 @@
     4. [Sample Structure of the Machine Learning Model](#sample-structure-of-the-machine-learning-model)
 1. [Exploratory Analysis](#exploratory-analysis)
 1. [Presentation](#presentation)
-1. [Dashboard](#dashboard)
+1. [References](#references)
+3. [Dashboard](#dashboard)
 
 ## Topic <a name="topic"></a>
 * The relationship between NBA player statistics and performance over the course of the modern NBA
@@ -391,4 +392,8 @@ Below is a Storyboard layouts and a Mockup layouts
 ![Pic 54](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage2.jpg)	
 
 ## Storyboard Page 3 - NBA News	
-![Pic 55](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage3.jpg)	
+![Pic 55](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage3.jpg)
+
+# References <a name="references"></a>
+
+
