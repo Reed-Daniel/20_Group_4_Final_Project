@@ -12,11 +12,17 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
-<body class="bg-info">
+<body style="background-color:cornflowerblue;">
     <div class="wrapper">
-        <nav class="navbar navbar-light bg-info navbar-expand-lg">
-            <a class="navbar-brand" href="index.html">NBA Prime Time!</a>
+        <nav class="navbar" style="background-color:cornflowerblue;">
+          <ol>
+            <li class="player"><a href="index.html">Home</a></li>
+            <li class="player"><a href="project.html">Project Overview</a></li>
+            <li class="player"><a href="team.html">Meet the Team</a></li>
+          </ol>
         </nav>
     </div>
     <div class="jumbotron">
@@ -25,98 +31,145 @@
     <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
-            <h3>Performance in the League: <small> How do players measure up against the greats?<br><br>LETS FIND OUT!</small></h3>
+            <h3>Performance in the League: <small> How do players measure up against each other over the decades?</small></h3><br>
+            <h2> LETS FIND OUT!</h2>
           </div>
           <div class="col-md-6">
-            <p>
-              - Does performance in the NBA look the same decade by decade?<br><br> - What does a prototypical player look like in each decade?<br><br> - How has that changed over time?<br><br> - Does the decade have an affect on the number of games a player will play in a season? 
-            </p>
+            <p1 style="font-size:x-large">
+              - Does performance in the NBA look the same decade by decade?<br><br> - What does a prototypical player look like in each decade?<br><br> - Can you predict an All-Star?
+            </p1>
           </div>
-          <div class="col-md-3">
-              <img src="https://cdn.bleacherreport.net/images_root/slides/photos/000/621/847/wilt3_original.jpg?1294624028" alt="wilt" width="300" height="300">
+          <div class="col-md-1">
+            <img src="https://i.pinimg.com/564x/a3/7f/1e/a37f1eda0a39f449985de01f87de0449.jpg" alt="hoop" width="300" height="250">
+          </div>
+          <div class="col-md-2">
+            <div class="basketball">
+              <div class="ball">
+              <div class="lines"></div>
+              </div>
+            <div class="shadow"></div>
+            </div>
           </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2">
-                <form class="bg-info">
-                    <p>Filter Search</p>
-                    <ul class="list-group bg-info">
-                        <li class="list-group-item bg-info">
-                            <label for="date">Enter Name</label>
-                            <input type="text" placeholder="Michael Jordan" id="Name" />
+            <div class="col-md-3">
+                <form style="background-color:cornflowerblue;">
+                    <p>PLAYER SEARCH</p>
+                    <ul class="list-group" style="background-color:cornflowerblue;">
+                        <li>
+                          <button id="filter-btn" type="button" class="btn">Filter Table</button>
                         </li>
-                        <li class="list-group-item bg-info">
-                            <label for="date">Enter Birth Year</label>
-                            <input type="text" placeholder="1991" id="datetime" />
+                        <li class="list-group-item" style="background-color:cornflowerblue;">
+                            <label for="name">Enter Name</label><br>
+                            <input type="text" placeholder="Michael Jordan" id="name" size="18"/>
                         </li>
-                        <li class = "list-group-item bg-info">
-                            <label for="city">Enter Position</label><br>
-                              <input type="text" placeholder="C" id="position" />
+                        <li class="list-group-item" style="background-color:cornflowerblue;">
+                            <label for="year">Enter Season</label><br>
+                            <input type="text" placeholder="1991" id="year" size="18"/>
+                        </li>
+                        <li class = "list-group-item" style="background-color:cornflowerblue;">
+                            <label for="position">Enter Position</label><br>
+                              <input type="text" placeholder="C" id="position" size="18"/>
                         </li><br>
-                        <li class = "list-group-item bg-info">
-                            <label for="state">Enter Height (in)</label><br>
-                              <input type="text" placeholder="72" id= "height" />
+                        <li class = "list-group-item"style="background-color:cornflowerblue;">
+                            <label for="height">Enter Height (in)</label><br>
+                              <input type="text" placeholder="72" id= "height" size="18" />
                         </li><br>
-                        <li class = "list-group-item bg-info">
-                            <label for="country">Enter Weight (lbs)</label>
-                              <input type="text" placeholder="200" id="weight" />
+                        <li class = "list-group-item" style="background-color:cornflowerblue;">
+                            <label for="weight">Enter Weight (lbs)</label><br>
+                              <input type="text" placeholder="200" id="weight" size="18"/>
                         </li><br>
-                        <li class = "list-group-item bg-info">
-                            <label for="shape">Enter Stat</label><br>
-                              <input type="text" placeholder="points" id="points" />
-                        </li>
-                    </ul>
-                </form>
-            </div>
-            <div class="col-md-2">
-                <form class="bg-info">
-                    <p>Era Search</p>
-                    <ul class="list-group bg-info">
-                        <li class="list-group-item bg-info">
-                            <label for="date">Enter Decade</label>
-                            <input type="text" placeholder="90s" id="datetime" />
-                        </li>
-                        <li class = "list-group-item bg-info">
-                            <label for="city">Enter Percentile</label><br>
-                              <input type="text" placeholder="Top 25%" id="percentile" />
+                        <li class = "list-group-item" style="background-color:cornflowerblue;">
+                            <label for="points">Enter Points</label><br>
+                              <input type="text" placeholder="points" id="points" size="18"/>
+                        </li><br>
+                        <li class = "list-group-item" style="background-color:cornflowerblue;">
+                          <label for="assists">Enter Assists</label><br>
+                            <input type="text" placeholder="assists" id="assists" size="18"/>
                         </li><br>
                     </ul>
                 </form>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <table class="table table-striped">
                     <thead>
                       <tr>
-                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Season Year</th>
                         <th>Position</th>
-                        <th>Height</th>
-                        <th>Weight</th>
-                        <th>Stat</th>
-                        <th>Stat</th>
-                        <th>Stat</th>
+                        <th>Height (in)</th>
+                        <th>Weight (lbs)</th>
+                        <th>Points</th>
+                        <th>Assists</th>
                       </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
             </div>
         </div>
-        <div class="row"> 
-            <div class="col-md-2">
-                <div class="well" style="border:2px solid black; background-color: info;">
-                  <h5>Player Name:</h5>
-                  <!-- <select id="selDataset"></select> -->
-                  <select id="selDataset" onchange="optionChanged(this.value)"></select>
-                </div>
-                <div class="panel panel-primary" style="border:2px solid black; background-color: info;">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">Player Info</h3>
-                  </div>
-                  <div id="sample-metadata" class="panel-body"></div>
-                </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3">
+              <p style="font-size:30px">STAT SCALE</p>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="Age" name="Age" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">50 </output>
+                <label for="Age">Age</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="TrueShooting" name="TrueShooting" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">50 </output>
+                <label for="TrueShooting">True Shooting %</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="82" value="40" class="slider" id="Games" name="Games" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">40 </output>
+                <label for="Games">Games</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="DefRebound" name="DefRebound" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">50 </output>
+                <label for="DefRebound">Defensive Rebound %</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="50" value="25" class="slider" id="PlayerEfficiency" name="PlayerEfficiency" oninput="this.nextElementSibling.value = this.value">
+                <output  style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">25 </output>
+                <label for="PlayerEfficiency">Player Efficiency Rating</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="82" value="40" class="slider" id="GameStarted" name="GameStarted" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">40 </output>
+                <label for="GameStarted">Games Started</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="0" max="1" value="0.5" step= "0.1" class="slider" id="ThreePoint" name="ThreePoint" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">0.5 </output>
+                <label for="ThreePoint">Three Point Attempted Rate</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="OffRebound" name="OffRebound" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">50 </output>
+                <label for="OffRebound">Offensive Rebound %</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="4000" value="2000" class="slider" id="MinutesPlayed" name="MinutesPlayed" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">2000 </output>
+                <label for="MinutesPlayed">Minutes Played</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="0" max="1" value="0.5" step="0.1" class="slider" id="FreeThrow" name="FreeThrow" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">0.5 </output>
+                <label for="FreeThrow">Free Throw %</label>
               </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app.js"></script>
 </body>
-</html> 
+</html>
