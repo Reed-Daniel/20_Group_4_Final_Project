@@ -7,10 +7,7 @@
 1. [Reason for Selecting the Topic](#reason-for-selecting-the-topic)
 1. [Source Data](#source-data)
 1. [Questions to Answer](#questions-to-answer)
-1. [Project & Communication Protocols](#project-communication-protocols)
 1. [Technologies Used & Tools](#technologies-used-&-tools)
-   1. [Technology Used](#technology-used)
-   1. [Tools](#tools)
 1. [FSD & ERD](#fsd-&-erd)
     1. [High Level](#high-level)
     1. [NBA Stats Database](#nba-stats-database-erd)
@@ -68,29 +65,6 @@ per_game_df.shape | 18,297 | 11 |
 * Can you determine whether a NBA Player can be an AllStar based on their season statistics? In other words, is there a quantitative way to predict whether a player will be an AllStar?
 
 ## Technologies Used & Tools <a name="technologies-used-&-tools"></a>
-### Technologies Used <a name="technology-used"></a>
-#### Data Clean & Analysis
-* Pandas
-* Numpy
-* MathplotLib
-* 
-
-#### Database Storage
-* PostgreSQL is where we will be storing our database
-
-#### Machine Learning
-* We used PowerBi for our preliminary data inspection to assist in determining our input variables and our desired output
-* SciKitLearn library will be used to create a classifier
-	* Balanced_accuracy_score
-	* Confusion_matrix
-	* Classification_report_imbalanced
-* Tensorflow
-
-#### Dashboard
-* The dashboard will be comprised of HTML, CSS, and JavaScript components to create an interactive dashboard allowing users to select player information from drop downs fields
-* Results and visualizations will be displayed on Github pages and a Tableau dashboard if further storytelling is needed  
-
-### Tools <a name="tools"></a>
 Systems | Tools 
 |:--------------------------:|:---------------------------:|
 Data Cleaning & Analysis | Pandas <br /> Google CoLab <br /> Plotly <br />  <MatPlotLibbr /> hvPlot <br /> NumPy <br /> Panda Pickle |
@@ -113,7 +87,7 @@ Database Schema |
 
 ## NBA Machine Learning FSD <a name="machine-learning-erd"></a>
 ### Supervised Model <a name="supervised-model"></a>
-![Pic 4](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/SupervisedModelDiagram.jpg) | | ![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Supervised_Model_Performances.png)|
+![Pic 4](https://lucid.app/lucidchart/f26c2752-ffc8-4cfb-8102-997e58046837/edit?page=0_0&invitationId=inv_42bbc474-c884-4d34-b3ff-9708fd919ca0#) | | ![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Supervised_Model_Performances.png)|
 
 ### Unsupervised Model <a name="unsupervised-model"></a>
 ![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/UnsupervisedModelDiagram.jpg)
@@ -376,16 +350,16 @@ Below is a Storyboard layouts and a Mockup layouts
 ![Pic 55](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage3.jpg)
 
 # Summary of the Findings <a name="summary-of-the-findings"></a>
-* Does the NBA look the same decade by decade in terms of performance? 
-	*
-* What does a prototypical player look like in each decade?
-	*
-* How has that changed over time?
-	*
-* Can you predict whether an NBA player can be an All-Star?
-	*
-* What are the most important stats in terms of determining an NBA All-Star?
-	*
+* Does the NBA look the same decade by decade in terms of performance? <br />
+	* <br />
+* What does a prototypical player look like in each decade?<br />
+	* <br />
+* How has that changed over time?<br />
+	* <br />
+* Can you predict whether an NBA player can be an All-Star?<br />
+	* <br />
+* What are the most important stats in terms of determining an NBA All-Star?<br />
+	* <br />
 
 # References <a name="references"></a>
 * Kaggle - NBA Game Data - Players.csv <br />
