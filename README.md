@@ -1,3 +1,5 @@
+![Pic 0](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Dashboard/images/NBA_Greats.jpg)
+
 # NBA Player Statistics & Performance Over the Course of the Modern NBA
 # Group 4 Final Project
 # **Table of Contents** #
@@ -12,7 +14,7 @@
 1. [FSD & ERD](#fsd-&-erd)
     1. [High Level](#high-level)
     1. [NBA Stats Database](#nba-stats-database-erd)
-    1. [Machine Learni	ng ERD](#machine-learning-erd)
+    1. [Machine Learning ERD](#machine-learning-erd)
     1. [Supervised Model](#supervised-model)
     1. [Unsupervised Model](#unsupervised-model)
 1. [Database Model](#database-model)
@@ -31,7 +33,8 @@
     4. [Sample Structure of the Machine Learning Model](#sample-structure-of-the-machine-learning-model)
 1. [Exploratory Analysis](#exploratory-analysis)
 1. [Presentation](#presentation)
-1. [Dashboard](#dashboard)
+1. [References](#references)
+3. [Dashboard](#dashboard)
 
 ## Topic <a name="topic"></a>
 * The relationship between NBA player statistics and performance over the course of the modern NBA
@@ -129,8 +132,6 @@ Database Schema |
 
 ## NBA Machine Learning FSD <a name="machine-learning-erd"></a>
 ### Supervised Model <a name="supervised-model"></a>
-Supervised Model | Supervised Model Performance |
-|:-----------------------------------:| |:-----------------------------------:|
 ![Pic 4](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/SupervisedModelDiagram.jpg) | | ![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Supervised_Model_Performances.png)|
 
 ### Unsupervised Model <a name="unsupervised-model"></a>
@@ -391,4 +392,11 @@ Below is a Storyboard layouts and a Mockup layouts
 ![Pic 54](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage2.jpg)	
 
 ## Storyboard Page 3 - NBA News	
-![Pic 55](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage3.jpg)	
+![Pic 55](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage3.jpg)
+
+# References <a name="references"></a>
+* Kaggle - NBA Game Data - Players.csv <br />
+	(https://www.kaggle.com/datasets/nathanlauga/nba-games?select=players.csv&msclkid=1ac414e3b79411eca127c4f5fc6f0cf5)
+* Kaggle - Python · NBA Players Seasons Stats since 1950 - season-stats.csv <br />
+	(https://www.kaggle.com/code/samlow1/season-stats/data)
+
