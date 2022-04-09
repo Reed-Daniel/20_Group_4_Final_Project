@@ -27,6 +27,12 @@ function buildTable(data) {
 function handleClick() {
   // Grab the name value from the filter
   let names = d3.select("#name").property("value");
+  let years = d3.select("#year").property("value");
+  let positions = d3.select("#position").property("value");
+  let height = d3.select("#height").property("value");
+  let weight = d3.select("#weight").property("value");
+  let points = d3.select("#points").property("value");
+  let assists = d3.select("#assists").property("value");
   let filteredData = tableData;
 
    // Check to see if a name was entered and filter the
@@ -35,6 +41,42 @@ function handleClick() {
     // Apply `filter` to the table data to only keep the
     // rows where the `name` value matches the filter value
     filteredData = filteredData.filter(row => row.name === names);
+  };
+
+  if (years) {
+    // Apply `filter` to the table data to only keep the
+    // rows where the `name` value matches the filter value
+    filteredData = filteredData.filter(row => row.year === years);
+  };
+
+  if (positions) {
+    // Apply `filter` to the table data to only keep the
+    // rows where the `name` value matches the filter value
+    filteredData = filteredData.filter(row => row.position === positions);
+  };
+
+  if (height) {
+    // Apply `filter` to the table data to only keep the
+    // rows where the `name` value matches the filter value
+    filteredData = filteredData.filter(row => row.height === height);
+  };
+
+  if (weight) {
+    // Apply `filter` to the table data to only keep the
+    // rows where the `name` value matches the filter value
+    filteredData = filteredData.filter(row => row.weight === weight);
+  };
+
+  if (points) {
+    // Apply `filter` to the table data to only keep the
+    // rows where the `name` value matches the filter value
+    filteredData = filteredData.filter(row => row.points === points);
+  };
+
+  if (assists) {
+    // Apply `filter` to the table data to only keep the
+    // rows where the `name` value matches the filter value
+    filteredData = filteredData.filter(row => row.assists === assists);
   };
 
    // Rebuild the table using the filtered data
@@ -49,11 +91,18 @@ d3.selectAll("#filter-btn").on("click", handleClick);
 // Build the table when the page loads
 buildTable(tableData);
 
-// dynamic range slider to show current value
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
 
-slider.oninput = function() {
-  output.innerHTML = this.value;
+// dynamic range slider to show current value
+function sliderStuff(id){
+  let slider = document.getElementById(id);
+  let output = document.getElementById('output'+id)
+  output.innerHTML = slider.value;
 }
+
+d3.selectAll('input.slider').on('change', function(){
+  sliderStuff(this.properties.id)
+})
+
+//slider.oninput = function() {
+  //output.innerHTML = this.value;
+//};
