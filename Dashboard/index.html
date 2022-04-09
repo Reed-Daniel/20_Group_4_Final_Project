@@ -35,8 +35,8 @@
             <h2> LETS FIND OUT!</h2>
           </div>
           <div class="col-md-6">
-            <p1 style="font-size:large">
-              - Does performance in the NBA look the same decade by decade?<br><br> - What does a prototypical player look like in each decade?<br><br> - Does the decade have an affect on the number of games a player will play in a season?<br><br> - Can you predict an All-Star?
+            <p1 style="font-size:x-large">
+              - Does performance in the NBA look the same decade by decade?<br><br> - What does a prototypical player look like in each decade?<br><br> - Can you predict an All-Star?
             </p1>
           </div>
           <div class="col-md-1">
@@ -114,34 +114,54 @@
             <div class="col-md-3">
               <p style="font-size:30px">STAT SCALE</p>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="GamesPlayed" name="GamesPlayed">
-                <h5>Value: <span id="outputGamesPlayed"></span></h5>
-                <label for="GamesPlayed">Games Played</label>
+                <input type="range" min="1" max="100" value="50" class="slider" id="Age" name="Age">
+                <h5>Value: <span id="outputAge"></span></h5>
+                <label for="Age">Age</label>
               </div>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="Points" name="Points">
-                <h5>Value: <span id="outputPoints"></span></h5>
-                <label for="Points">Points</label>
+                <input type="range" min="1" max="100" value="50" class="slider" id="TrueShooting" name="TrueShooting">
+                <h5>Value: <span id="outputTrueShooting"></span></h5>
+                <label for="TrueShooting">True Shooting %</label>
               </div>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="Assists" name="Assists">
-                <h5>Value: <span id="outputAssists"></span></h5>
-                <label for="Assists">Assists</label>
+                <input type="range" min="1" max="82" value="40" class="slider" id="Games" name="Games">
+                <h5>Value: <span id="outputGames"></span></h5>
+                <label for="Games">Games</label>
               </div>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="Steals" name="Steals">
-                <h5>Value: <span id="outputSteals"></span></h5>
-                <label for="Steals">Steals</label>
+                <input type="range" min="1" max="100" value="50" class="slider" id="DefRebound" name="DefRebound">
+                <h5>Value: <span id="outputDefRebound"></span></h5>
+                <label for="DefRebound">Defensive Rebound %</label>
               </div>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="Rebounds" name="Rebounds">
-                <h5>Value: <span id="outputRebounds"></span></h5>
-                <label for="Rebounds">Rebounds</label>
+                <input type="range" min="1" max="50" value="25" class="slider" id="PlayerEfficiency" name="PlayerEfficiency">
+                <h5>Value: <span id="outputPlayerEfficiency"></span></h5>
+                <label for="PlayerEfficiency">Player Efficiency Rating</label>
               </div>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="WinShare" name="WinShare">
-                <h5>Value: <span id="outputWinShare"></span></h5>
-                <label for="WinShare">Win Share</label>
+                <input type="range" min="1" max="82" value="40" class="slider" id="GameStarted" name="GameStarted">
+                <h5>Value: <span id="outputGameStarted"></span></h5>
+                <label for="GameStarted">Games Started</label>
+              </div>
+              <div class="slidecontainer">
+                <input type="range" min="0" max="1" value=".5" step= ".1" class="slider" id="ThreePoint" name="ThreePoint">
+                <h5>Value: <span id="outputThreePoint"></span></h5>
+                <label for="ThreePoint">Three Point Attempted Rate</label>
+              </div>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="OffRebound" name="OffRebound">
+                <h5>Value: <span id="outputOffRebound"></span></h5>
+                <label for="OffRebound">Offensive Rebound %</label>
+              </div>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="4000" value="2000" class="slider" id="MinutesPlayed" name="MinutesPlayed">
+                <h5>Value: <span id="outputMinutesPlayed"></span></h5>
+                <label for="MinutesPlayed">Minutes Played</label>
+              </div>
+              <div class="slidecontainer">
+                <input type="range" min="0" max="1" value=".5" step=".1" class="slider" id="FreeThrow" name="FreeThrow">
+                <h5>Value: <span id="outputFreeThrow"></span></h5>
+                <label for="FreeThrow">Free Throw %</label>
               </div>
             </div>
           </div>
