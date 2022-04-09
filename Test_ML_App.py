@@ -47,7 +47,7 @@ def lambda_handler(params=list):
     results = {}
     # code that runs from params here
     ## This is the lambda for the ML model 
-    
+
     # Download pickeled model from S3 and unpickle
     #s3.download_file(s3_bucket, model_name, temp_file_path)
     #@TODO: make sure path to pickle is correct
@@ -79,4 +79,5 @@ def builtResponse(statusCode, responseBody=None):
     }
     if responseBody:
         response['body'] = responseBody
-    return response    
+    return 
+
