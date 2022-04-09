@@ -92,17 +92,4 @@ d3.selectAll("#filter-btn").on("click", handleClick);
 buildTable(tableData);
 
 
-// dynamic range slider to show current value
-function sliderStuff(id){
-  let slider = document.getElementById(id);
-  let output = document.getElementById('output'+id)
-  output.innerHTML = slider.value;
-}
 
-d3.selectAll('input.slider').on('change', function(){
-  sliderStuff(this.properties.id)
-})
-
-//slider.oninput = function() {
-  //output.innerHTML = this.value;
-//};

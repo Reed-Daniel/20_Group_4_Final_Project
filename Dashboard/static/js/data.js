@@ -21,6 +21,13 @@ let data  = [
 // API gateway endpoint
 const url = 'https://4dql7xyhmb.execute-api.us-east-2.amazonaws.com/default/nba-viz';
 
-fetch(url)
-  .then(response => response.json())
-  .then(data => console.log(data));
+//fetch(url)
+  //.then(response => response.json())
+  //.then(data => console.log(data));
+
+
+  // data in this case is = to stringprediction
+d3.json('/api/lambdastuff').then(data=>{
+    //do data stuff with 'data'
+    console.log(data);
+});

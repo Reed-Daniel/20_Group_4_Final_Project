@@ -19,7 +19,7 @@
     <div class="wrapper">
         <nav class="navbar" style="background-color:cornflowerblue;">
           <ol>
-            <li class="player"><a href="index_2.html">Home</a></li>
+            <li class="player"><a href="index.html">Home</a></li>
             <li class="player"><a href="project.html">Project Overview</a></li>
             <li class="player"><a href="team.html">Meet the Team</a></li>
           </ol>
@@ -114,53 +114,53 @@
             <div class="col-md-3">
               <p style="font-size:30px">STAT SCALE</p>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="Age" name="Age">
-                <h5>Value: <span id="outputAge"></span></h5>
+                <input type="range" min="1" max="100" value="50" class="slider" id="Age" name="Age" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">50 </output>
                 <label for="Age">Age</label>
-              </div>
+              </div><br>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="TrueShooting" name="TrueShooting">
-                <h5>Value: <span id="outputTrueShooting"></span></h5>
+                <input type="range" min="1" max="100" value="50" class="slider" id="TrueShooting" name="TrueShooting" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">50 </output>
                 <label for="TrueShooting">True Shooting %</label>
-              </div>
+              </div><br>
               <div class="slidecontainer">
-                <input type="range" min="1" max="82" value="40" class="slider" id="Games" name="Games">
-                <h5>Value: <span id="outputGames"></span></h5>
+                <input type="range" min="1" max="82" value="40" class="slider" id="Games" name="Games" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">40 </output>
                 <label for="Games">Games</label>
-              </div>
+              </div><br>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="DefRebound" name="DefRebound">
-                <h5>Value: <span id="outputDefRebound"></span></h5>
+                <input type="range" min="1" max="100" value="50" class="slider" id="DefRebound" name="DefRebound" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">50 </output>
                 <label for="DefRebound">Defensive Rebound %</label>
-              </div>
+              </div><br>
               <div class="slidecontainer">
-                <input type="range" min="1" max="50" value="25" class="slider" id="PlayerEfficiency" name="PlayerEfficiency">
-                <h5>Value: <span id="outputPlayerEfficiency"></span></h5>
+                <input type="range" min="1" max="50" value="25" class="slider" id="PlayerEfficiency" name="PlayerEfficiency" oninput="this.nextElementSibling.value = this.value">
+                <output  style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">25 </output>
                 <label for="PlayerEfficiency">Player Efficiency Rating</label>
-              </div>
+              </div><br>
               <div class="slidecontainer">
-                <input type="range" min="1" max="82" value="40" class="slider" id="GameStarted" name="GameStarted">
-                <h5>Value: <span id="outputGameStarted"></span></h5>
+                <input type="range" min="1" max="82" value="40" class="slider" id="GameStarted" name="GameStarted" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">40 </output>
                 <label for="GameStarted">Games Started</label>
-              </div>
+              </div><br>
               <div class="slidecontainer">
-                <input type="range" min="0" max="1" value="0.5" step= "0.1" class="slider" id="ThreePoint" name="ThreePoint">
-                <h5>Value: <span id="outputThreePoint"></span></h5>
+                <input type="range" min="0" max="1" value="0.5" step= "0.1" class="slider" id="ThreePoint" name="ThreePoint" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">0.5 </output>
                 <label for="ThreePoint">Three Point Attempted Rate</label>
-              </div>
+              </div><br>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="OffRebound" name="OffRebound">
-                <h5>Value: <span id="outputOffRebound"></span></h5>
+                <input type="range" min="1" max="100" value="50" class="slider" id="OffRebound" name="OffRebound" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">50 </output>
                 <label for="OffRebound">Offensive Rebound %</label>
-              </div>
+              </div><br>
               <div class="slidecontainer">
-                <input type="range" min="1" max="4000" value="2000" class="slider" id="MinutesPlayed" name="MinutesPlayed">
-                <h5>Value: <span id="outputMinutesPlayed"></span></h5>
+                <input type="range" min="1" max="4000" value="2000" class="slider" id="MinutesPlayed" name="MinutesPlayed" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">2000 </output>
                 <label for="MinutesPlayed">Minutes Played</label>
-              </div>
+              </div><br>
               <div class="slidecontainer">
-                <input type="range" min="0" max="1" value="0.5" step="0.1" class="slider" id="FreeThrow" name="FreeThrow">
-                <h5>Value: <span id="outputFreeThrow"></span></h5>
+                <input type="range" min="0" max="1" value="0.5" step="0.1" class="slider" id="FreeThrow" name="FreeThrow" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">0.5 </output>
                 <label for="FreeThrow">Free Throw %</label>
               </div>
             </div>
@@ -173,6 +173,4 @@
     <script src="static/js/app.js"></script>
 </body>
 </html>
-
-
 
