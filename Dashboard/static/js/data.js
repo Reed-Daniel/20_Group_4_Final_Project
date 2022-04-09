@@ -2,22 +2,24 @@
 let data  = [
     {
       name: "Michael Jordan",
-      year: "1963",
+      year: "1994",
       position: "SG",
       height: "77",
       weight: "225",
-      steals: "400",
+      points: "400",
+      assists: "6"
     },
     {name: "Kobe Bryant",
-    year: "1978",
+    year: "2010",
     position: "SG",
     height: "78",
     weight: "205",
-    steals: "350",}
+    points: "350",
+    assists: "2"}
 ]
 
 // API gateway endpoint
-const url = 'https://f1n6f68yx1.execute-api.us-east-1.amazonaws.com/default/nba_viz';
+const url = 'https://4dql7xyhmb.execute-api.us-east-2.amazonaws.com/default/nba-viz';
 
 fetch(url)
   .then(response => response.json())
