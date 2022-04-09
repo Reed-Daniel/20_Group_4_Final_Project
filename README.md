@@ -87,10 +87,10 @@ Database Schema |
 
 ## NBA Machine Learning FSD <a name="machine-learning-erd"></a>
 ### Supervised Model <a name="supervised-model"></a>
-![Pic 4](https://lucid.app/lucidchart/f26c2752-ffc8-4cfb-8102-997e58046837/edit?page=0_0&invitationId=inv_42bbc474-c884-4d34-b3ff-9708fd919ca0#) | | ![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Supervised_Model_Performances.png)|
+![Pic 4](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Supervised%20Learning%20Model%20Diagram.jpeg) | | ![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Supervised_Model_Performances.png)|
 
 ### Unsupervised Model <a name="unsupervised-model"></a>
-![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/ERD/UnsupervisedModelDiagram.jpg)
+![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Unsupervised%20Model.jpeg)
 
 # Database Model <a name="database-model"></a>
 ## Sample Structure of the Database Model <a name= "sample-structure-of-the-database-model"><a/>
