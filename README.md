@@ -28,13 +28,14 @@
     1. [Description of How Data Was Split Into Training & Testing Sets](#description-of-how-data-was-split-into-training-&-testing-sets)
     1. [Explanation of Model Choice, Indluce Benefits & Limitations](#explanation-of-model-choice,-indluce-benefits-&-limitations)
     1. [File Source](#file-source)
-    2. [PCA KMeans](#pca-kmeans)
-    3. [Additional Informataion on PCA](#additional-informataion-on-PCA)
-    4. [Sample Structure of the Machine Learning Model](#sample-structure-of-the-machine-learning-model)
+    1. [PCA KMeans](#pca-kmeans)
+    1. [Additional Informataion on PCA](#additional-informataion-on-PCA)
+    1. [Sample Structure of the Machine Learning Model](#sample-structure-of-the-machine-learning-model)
 1. [Exploratory Analysis](#exploratory-analysis)
 1. [Presentation](#presentation)
+1. [Dashboard](#dashboard)
+1. [Summary of the Findings](summary-of-the-findings)
 1. [References](#references)
-3. [Dashboard](#dashboard)
 
 ## Topic <a name="topic"></a>
 * The relationship between NBA player statistics and performance over the course of the modern NBA
@@ -66,33 +67,13 @@ per_game_df.shape | 18,297 | 11 |
 	* How has that changed over time?
 * Can you determine whether a NBA Player can be an AllStar based on their season statistics? In other words, is there a quantitative way to predict whether a player will be an AllStar?
 
-## Project and Communication Protocols <a name="project-communication-protocols"></a>
-* Our group maintains a steady flow of communication through Slack and our Teams page to stay updated on the status of the project deliverables as well as to coordinate additional meetings outside of class time. 
-
-### GitHub
-#### The main branch should include: 
-* All code necessary to perform exploratory analysis 
-* Some code necessary to complete the machine learning portion of the project 
-* README.md must include: 
-	* Description of the communication protocols 
-	* Outline of the project (this may include images, but should be easy to follow and digest).  Note: The descriptions and explanations required in all other project deliverables should also be in your README.md as part of your outline, unless otherwise noted.
-* Individual Branches 
-	* Description of the communication protocols 
-	* At least one branch for each team member 
-	* Each team member has at least four commits for the duration of the second segment (eight total commits per person)
-
-Responsibility Legend|Symbol|Team Member|System|Phase  
-|:----------------------------------:|:--:|:--------------------:|:-----------------------:|:-----:|
-The team member in the square role will be responsible for the respository | □ | K. McClelland | GitHub <br /> Teams <br /> Calendar <br /> | I & II |
-The member in the triangle role will create a mockup of a machine learning model.  This can even be a diagram that explains how it will work concurrently with the rest of the project steps | ∆ | S. Crimi | ML | I & II |
-The member in the circle role will create a mockup of a database with a set of sample data, or even fabricated data.  This will ensure the database will work seamlessly with the rest of the project | ○ | J. Klein | Database | I & II |
-The member in the X role will decide which technologies will be used for each step of the project | X | S. Crimi <br /> J. Klein <br /> R. Daniel <br /> | ML <br /> Database <br /> Dashboard <br />| I & II <br /> I & II <br /> II |
-
 ## Technologies Used & Tools <a name="technologies-used-&-tools"></a>
 ### Technologies Used <a name="technology-used"></a>
 #### Data Clean & Analysis
-* Pandas will be used to clean and perform exploratory analysis
-* Other Python dependencies like Numpy, Plotly, hvplot, MatPlotLib will be imported as needed to assist in our data cleaning
+* Pandas
+* Numpy
+* MathplotLib
+* 
 
 #### Database Storage
 * PostgreSQL is where we will be storing our database
@@ -112,11 +93,11 @@ The member in the X role will decide which technologies will be used for each st
 ### Tools <a name="tools"></a>
 Systems | Tools 
 |:--------------------------:|:---------------------------:|
-Data Cleaning & Analysis | Pandas <br /> Numpy <br /> MatPlotLib|
-ERD | Power BI <br /> Lucid Charts <br /> Quick Database Diagrams |
+Data Cleaning & Analysis | Pandas <br /> Google CoLab <br /> Plotly <br />  <MatPlotLibbr /> hvPlot <br /> NumPy <br /> Panda Pickle |
+ERD | Lucid Charts <br /> Quick Database Diagrams <br /> Power BI |
 Database | PgAdmin4 <br /> AWS |
-Machine Learning | SciKitLearn <br /> Google CoLab <br /> Supervised Learning Model |
-Dashboard | HTML <br /> CSS <br /> JavaScript <br /> Tableau <br /> GitHub Pages |
+Machine Learning | SciKitLearn <br /> SQLAlchemy <br /> Seaborn <br /> YAML <br /> Google CoLab <br /> Classification Report Imbalanced <br /> Imblearn <br /> MarkupSafe <br /> Psycopg2 <br /> Supervised Learning Model <br /> Confusion Matrix <br /> boto3 <br /> json |
+Dashboard | HTML <br /> CSS <br /> JavaScript <br /> GitHub Pages <br /> S3 <br /> d3 <br /> Flask |
 
 # FSD & ERD <a name="fsd-&-erd"></a>
 ## High Level <a name="high-level"></a>
@@ -376,7 +357,7 @@ Exploratory Analysis (Set 3)  |
 	* Description of the data exploration phase of the project 
 	* Description of the analysis phase of the project
 
-(https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g12146d41cc0_0_80)
+(https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g11fae844228_2_68)
 
 # Dashboard <a name="dashboard"></a>
 * A blueprint for the dashboard is created and includes all of the following:
@@ -393,6 +374,18 @@ Below is a Storyboard layouts and a Mockup layouts
 
 ## Storyboard Page 3 - NBA News	
 ![Pic 55](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage3.jpg)
+
+# Summary of the Findings <a name="summary-of-the-findings"></a>
+* Does the NBA look the same decade by decade in terms of performance? 
+	*
+* What does a prototypical player look like in each decade?
+	*
+* How has that changed over time?
+	*
+* Can you predict whether an NBA player can be an All-Star?
+	*
+* What are the most important stats in terms of determining an NBA All-Star?
+	*
 
 # References <a name="references"></a>
 * Kaggle - NBA Game Data - Players.csv <br />
