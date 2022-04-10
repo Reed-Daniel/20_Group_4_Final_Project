@@ -11,7 +11,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="static/css/style2.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
@@ -32,7 +32,7 @@
         <div class="row">
           <div class="col-md-4">
             <h2> Initial Analysis</h2>
-            <h3>Important bullets: <br><br> <small> bullet point  <br><br> bullet point <br><br> bullet point</small></h3>
+            <h3><small>- Initial data included NBA player statistics from 1950-Present <br><br>- Data was cleaned to<br><br> bullet point</small></h3>
           </div>
           <div class="col-md-4">
               <p> Insert visualization about initial analysis </p>
@@ -46,16 +46,25 @@
         <div class="row">
             <div class="col-md-4">
                 <h2> Machine Learning</h2>
-                <h3>Important bullets: <br><br> <small> bullet point  <br><br> bullet point <br><br> bullet point</small></h3>
+                <h3>  We performed a random forests on our initial feature set of 71 columns and were able to reduce it down to the top ten columns reference in the figure. These ten features are:<br><br>
+                  Together, these ten features explained about 64% of the variation of the target variable: which was whether the player made the AllStar game or not. We deployed these ten features in five separate supervised machine learning models and they had accuracy and recall rates of about 91% and 92% for all models.
+                </h3>
               </div>
-              <div class="col-md-4">
-                  <p> Insert visualization about Machine learning </p>
+              <div class="col-md-2">
+                  <p> 1.) Points per Game<br>
+                    2.) Total Points<br>
+                    3.) Field Goals<br>
+                    4.) Free Throws<br>
+                    5.) Free Throws Attempted<br>
+                    6.) Field Goals Attempted<br>
+                    7.) Minutes per Game<br>
+                    8.) Value Over Replacement Player<br>
+                    9.) Win Shares<br>
+                    10.) Two Pointers Made </p>
               </div>
-              <div class="col-md-4">
-                <p1 style="font-size:large">
-                  something else to continue story
-                </p1>
-              </div>
+              <div class="col-md-6">
+                <object> </object>
+              </div><br><br>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>

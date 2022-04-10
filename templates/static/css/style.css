@@ -57,6 +57,13 @@ h6 {
   text-align: center;
 }
 
+object {
+  background-image: url("../../images/ML_Features.png");
+  width: 100%; 
+  height: 100%; 
+  object-fit: cscale-down;
+}
+
 .team-photo {
   text-align: center;
 }
