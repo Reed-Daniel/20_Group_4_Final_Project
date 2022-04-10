@@ -3,7 +3,7 @@ from Test_ML_App import lambda_handler
 
 app = Flask(__name__)
 
-@app.route('/api/stuff/<param1>', methods=['GET'])
+#@app.route('/api/stuff/<param1>', methods=['GET'])
 def stuff(param1):
     # /api/stuff/50&200&200&100&100&5
     if request.method == "GET":

@@ -19,7 +19,7 @@
     <div class="wrapper">
         <nav class="navbar" style="background-color:cornflowerblue;">
           <ol>
-            <li class="player"><a href="index.html">Home</a></li>
+            <li class="player"><a href="index_2.html">Home</a></li>
             <li class="player"><a href="project.html">Project Overview</a></li>
             <li class="player"><a href="team.html">Meet the Team</a></li>
           </ol>
@@ -114,54 +114,54 @@
             <div class="col-md-3">
               <p style="font-size:30px">STAT SCALE</p>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="Age" name="Age" oninput="this.nextElementSibling.value = this.value">
-                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">50 </output>
-                <label for="Age">Age</label>
+                <input type="range" min="0" max="55" value="25" class="slider" id="PointsPer" name="PointsPer" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">25 </output>
+                <label for="PointsPer">Points Per Game</label>
               </div><br>
               <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="TrueShooting" name="TrueShooting" oninput="this.nextElementSibling.value = this.value">
-                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">50 </output>
-                <label for="TrueShooting">True Shooting %</label>
-              </div><br>
-              <div class="slidecontainer">
-                <input type="range" min="1" max="82" value="40" class="slider" id="Games" name="Games" oninput="this.nextElementSibling.value = this.value">
-                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">40 </output>
-                <label for="Games">Games</label>
-              </div><br>
-              <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="DefRebound" name="DefRebound" oninput="this.nextElementSibling.value = this.value">
-                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">50 </output>
-                <label for="DefRebound">Defensive Rebound %</label>
-              </div><br>
-              <div class="slidecontainer">
-                <input type="range" min="1" max="50" value="25" class="slider" id="PlayerEfficiency" name="PlayerEfficiency" oninput="this.nextElementSibling.value = this.value">
-                <output  style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">25 </output>
-                <label for="PlayerEfficiency">Player Efficiency Rating</label>
-              </div><br>
-              <div class="slidecontainer">
-                <input type="range" min="1" max="82" value="40" class="slider" id="GameStarted" name="GameStarted" oninput="this.nextElementSibling.value = this.value">
-                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">40 </output>
-                <label for="GameStarted">Games Started</label>
-              </div><br>
-              <div class="slidecontainer">
-                <input type="range" min="0" max="1" value="0.5" step= "0.1" class="slider" id="ThreePoint" name="ThreePoint" oninput="this.nextElementSibling.value = this.value">
-                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">0.5 </output>
-                <label for="ThreePoint">Three Point Attempted Rate</label>
-              </div><br>
-              <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="OffRebound" name="OffRebound" oninput="this.nextElementSibling.value = this.value">
-                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">50 </output>
-                <label for="OffRebound">Offensive Rebound %</label>
-              </div><br>
-              <div class="slidecontainer">
-                <input type="range" min="1" max="4000" value="2000" class="slider" id="MinutesPlayed" name="MinutesPlayed" oninput="this.nextElementSibling.value = this.value">
+                <input type="range" min="0" max="4100" value="2000" class="slider" id="Points" name="Points" oninput="this.nextElementSibling.value = this.value">
                 <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">2000 </output>
-                <label for="MinutesPlayed">Minutes Played</label>
+                <label for="Points">Points</label>
               </div><br>
               <div class="slidecontainer">
-                <input type="range" min="0" max="1" value="0.5" step="0.1" class="slider" id="FreeThrow" name="FreeThrow" oninput="this.nextElementSibling.value = this.value">
-                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">0.5 </output>
-                <label for="FreeThrow">Free Throw %</label>
+                <input type="range" min="1" max="1500" value="700" class="slider" id="FG" name="FG" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">700 </output>
+                <label for="FG">Field Goals</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="1000" value="500" class="slider" id="FT" name="FT" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">500 </output>
+                <label for="FT">Free Throws</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="1500" value="700" class="slider" id="FTA" name="FTA" oninput="this.nextElementSibling.value = this.value">
+                <output  style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">700 </output>
+                <label for="FTA">Free Throws Attempted</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="3000" value="1500" class="slider" id="FGA" name="FGA" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">1500 </output>
+                <label for="FGA">Field Goals Attempted</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="0" max="48" value="24" class="slider" id="MinPer" name="MinPer" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">24 </output>
+                <label for="MinPer">Minutes Per Game</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="20" value="10" class="slider" id="VORP" name="VORP" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">10 </output>
+                <label for="VORP">Value Over Replacement Player</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="30" value="15" class="slider" id="WinShare" name="WinShare" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">15 </output>
+                <label for="WinShare">Win Share</label>
+              </div><br>
+              <div class="slidecontainer">
+                <input type="range" min="0" max="1500" value="700" class="slider" id="TwoPoints" name="TwoPoints" oninput="this.nextElementSibling.value = this.value">
+                <output style="background-color:navy; color:white;padding:8px 15px;margin:5px;border-radius:10px;">700</output>
+                <label for="TwoPoints">Two Points Made</label>
               </div>
             </div>
           </div>

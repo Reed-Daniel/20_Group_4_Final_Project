@@ -23,7 +23,7 @@ const url = 'https://f1n6f68yx1.execute-api.us-east-1.amazonaws.com/default/nba_
 
 
 // data in this case is = to stringprediction
-d3.json(url).then(data=>{
+d3.json('/api/stuff').then(data=>{
   //do data stuff with 'data'
   console.log(data);
 });
