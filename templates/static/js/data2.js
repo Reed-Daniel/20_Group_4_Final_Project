@@ -18,6 +18,8 @@ let data  = [
     assists:'70'}
 ]
 
+
+
 // API gateway endpoint
 const url = 'https://f1n6f68yx1.execute-api.us-east-1.amazonaws.com/default/nba_viz';
 

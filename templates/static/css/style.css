@@ -19,11 +19,11 @@ ol{
 
 .player a{
   text-decoration:underline;
-  color: black;
+  color: white;
  }
 
 .player a:hover{
-  color:white;
+  color:navy;
   font-size:larger;
 }
 
