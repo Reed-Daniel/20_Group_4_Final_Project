@@ -2,7 +2,7 @@
 let data  = [
     {
       name: "Michael Jordan",
-      year: "1963",
+      year: "1994",
       position: "SG",
       height: "77",
       weight: "225",
@@ -10,7 +10,7 @@ let data  = [
       assists: '60'
     },
     {name: "Kobe Bryant",
-    year: "1978",
+    year: "2010",
     position: "SG",
     height: "78",
     weight: "205",
