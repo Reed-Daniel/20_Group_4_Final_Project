@@ -32,6 +32,7 @@
 1. [Presentation](#presentation)
 1. [Dashboard](#dashboard)
 1. [Summary of the Findings](summary-of-the-findings)
+1. [Lessons Learned](lessons-learned)
 1. [References](#references)
 
 ## Topic <a name="topic"></a>
@@ -157,7 +158,6 @@ Export from QuickDBD (https://www.quickdatabasediagrams.com/), linked to schema:
 |:----------------------------------:|
 ![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Postgres_Data_Import_AWS.jpg)| 	
 
-
 ### NBA Database - SQLAlchemy
 (5) NBA Database - SQLAlchemy |
 |:-----------------------------------:| 
@@ -170,64 +170,74 @@ We imported data from our AWS SQL database account, which had undergone an inten
 	
 Initially, our ten features were the following for Phase II:
 	
-1.)	Age 
-2.)	True Shooting % 
-3.)	Games Played 
-4.)	Defensive Rebounding rate % 
-5.)	Player Efficiency Rating (PER) 
-6.)	Games Started during the regular season 
-7.)	Three points attempted rate 
-8.)	Offensive Rebounding rate % 
-9.)	Free Throw Rate 
-10.)	Minutes Played
+1. Age <br /> 
+2. True Shooting % <br /> 
+3. Games Played <br />
+4. Defensive Rebounding rate <br />
+5. Player Efficiency Rating (PER) <br />
+6. Games Started during the regular season <br />
+7. Three points attempted rate <br /> 
+8. Offensive Rebounding rate % <br />
+9. Free Throw Rate <br />
+10. Minutes Played <br />
 	
 However, there was an error in how we performed the random forrest importance ranking process and the Principal Components Analysis (PCA). We erroneously did the PCA first and then performed the forrest ranking importance in Phase II. But upon further reading, the steps were supposed to be in the reverse order with random forest feature importance ranking performed first and then PCA done afterwards. 
 	
 After performing this portion of the machine learning correctly, we ended up with a new top ten feature set (which explained about 65% of the target variable’s variation):
 	
-1.)	Points per Game
-2.)	Total Points
-3.)	Field Goals
-4.)	Free Throws
-5.)	Free Throw Attempted
-6.)	Field Goals Attempted
-7.)	Minutes Played per Game
-8.)	Value Over Replacement Player (VORP)
-9.)	Win-Share
-10.)	 Two Pointers Made
-	
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Features_Ranking_hbar_new.png	
+1. Points per Game <br />
+2. Total Points <br />
+3. Field Goals <br />
+4. Free Throws <br />
+5. Free Throw Attempted <br />
+6. Field Goals Attempted <br />
+7. Minutes Played per Game <br />
+8. Value Over Replacement Player (VORP) <br />
+9. Win-Share <br />
+10. Two Pointers Made <br />
+
+Features Ranking hbar |
+|:-----------------------------------:| 
+![Pic 4](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Features_Ranking_hbar_new.png) |
 	
 In the file called “Exploratory_Analysis_Final”, the reader can see that we analyzed whether all ten features followed  a normal distribution. Our conclusions were that they did not and so we had to standardized them in both the unsupervised and supervised models. We had to combine two tables from our SQL database: “modern_season_stats” and “per_game_stats”. We performed a left join on both of them for the exploratory analysis and for the unsupervised and supervised models as well. 
 
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set1_Final.png
-
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set2_Final.png
-	
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set3_Final.png
+Features Ranking Exploratory Analysis |
+|:-----------------------------------:| 
+![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set1_Final.png) |
+![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set2_Final.png) |
+![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set3_Final.png) |
 	
 Finally, we created a jupyter notebook called “baseline_analysis” where we used all 71 features and created 71 PCAs and performed a random forest analysis on them in order to understand what a baseline model would look like. When you look through the file you can see that the model is highly accurate at 92% with a recall value of 95% and an f-1 score of 55%. We used this as the baseline when we performed our supervised learning in order to improve the accuracy ratings of the other models. 
 
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Baseline_CM_new.png
+Baseline |
+|:-----------------------------------:| 
+![Pic 8](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Baseline_CM_new.png) |
 
 ## Description of preliminary feature engineering and feature selection, including decision-making process.
-	
 As previously mentioned, we reversed two of the main processes in feature engineering and selection in Phase III and did them in the following order: 1.) Random Forest Features Importance Ranking, 2.) Princpal Components Analysis. After doing PCA, we then proceeded to perform K-Means clustering. Our work is in the following jupyter notebooks: “Features_Ranking_Final” and “PCA_KMeans_Redo_Final”. The first file denotes our features importance ranking. Again, we went from 71 features explaining the variation of the target variable, whether the NBA player was an All-Star or not, to 10 features explain about 64% of the variation of the target variable. 
 	
 If the reader proceeds to the second jupyter notebook, “PCA_KMeans_Redo_Final”, he can see our Principal Components Analysis and K-Means clustering results. We started with a PCA of three for all ten of our top ten features. PCA1 explained about 88% of the variation of the target variable, leaving PCAs 2 & 3 to explain 4.6% and 2.9% of the variation in the target variable. As a result, we went back and re-performed the PCA with two components instead of three. The rest of our results can be seen in the notebook. 
-	
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_ten_features_new.png
 
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/cvr_evr_new.png
+PCA Ten Features |
+|:-----------------------------------:| 
+![Pic 8](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_ten_features_new.png) |
+
+Cvr Evr New |
+|:-----------------------------------:| 
+![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/cvr_evr_new.png) |
 	
 Finally, we did a K-Means clustering. Our elbow curve suggested we select a K=2. After that  we matched PCAs 1 & 2 against one another in a 2-D scatter plot with each point representing whether a player was an NBA All Star or not. As you can see, our analysis form two decently distinct clusters.
 
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Elbow_Curve_new.png
+Elbow Curve |
+|:-----------------------------------:| 
+![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Elbow_Curve_new.png) |
 
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/KMeans_Clustering_new.png	
+KMeans Clustering |
+|:-----------------------------------:| 
+![Pic 11](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/KMeans_Clustering_new.png) |
 	
 ## Description of how data was split into training and testing sets.
-	
 Just like we did in Phase II, we split the sets into 75% training and 25% testing. This was after we undersampled the data in order to address overfitting issues inherent within the data (i.e., there is significant overrepresentation of non-NBA AllStars than NBA AllStars). So the undersampling significantly reduced the size of the sets in order to equalize the amount of representation between AllStar and non-AllStars within the target variable. 
 
 ## Explanation of model choice, including limitations and benefits.
@@ -236,28 +246,26 @@ In Phase II, we went with Random Forest, however, due to changes in the ten feat
 Still, there were benefits with utilizing the Logistical Regression model. According to research, logistical regression models are easier to implement, interpret, and are more efficient to train than most other supervised machine learning models. In addition, it makes no assumptions about the distribution of classes in the feature space, which if we did not normalize the data, would have worked to our advantage. However, we did normalize the data and so this was not a concern for our project. 
 	
 There are disadvantages though to utilizing a logistical regression model. A main problem is that the model constructs linear boundaries when a feature may not follow a linear relationship with the target variable. 
-	
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Logistical_Regression_CM_new.png
+
+Logistical Regression CM |
+|:-----------------------------------:| 
+![Pic 12](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Logistical_Regression_CM_new.png) |
  
 ## If changes occurred between the Segment 2 and Segment 3 deliverables
-
 Again, we reordered the steps from previously doing the PCA first and then the Features Ranking second to reversing these steps in order to acquire the correct ten features for our model. The ten features we have for Phase III are different from the ones in Phase II so we reran all the unsupervised and supervised models as  a result. This time, Logistical Regression performed the best and so we went with this model instead of Random Forest, which is what we went with last time. 
 	
 ## Description of how they have trained the model thus far, and any additional training that will take place
-	
 We will try to change the training/testing variables from the original 75%/25% mode to see if that improves the accuracy scores. We want to avoid making the model more complex because that will create additional overfitting problems. 
 
 ## Description of current accuracy score
-	
 The Logistical Regression model produced an accuracy rate of 92.2%, a recall for AllStars of 95%, and F-1 score of 55%. These were essentially the same as the scores for the baseline. 
 
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Phases_II_III_Model_Performances_new.png	
-	
+Phase II & III Model Performances |
+|:-----------------------------------:| 
+![Pic 13](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Phases_II_III_Model_Performances_new.png) |
+
 ## Additionally, the model obviously addresses the question or problem the team is solving.
-	
 The model seems to provide a decent attempt at predicting whether an NBA player would be an AllStar if he achieves certain milestones quantitatively. The actual selection process for selecting an NBA AllStar is very subjective with fans voting for their favorite players as the starters and then coaches and players selecting the back-up players. Even though they may vote based on player stats, there is still a subjective element to their decisions which makes it hard for our model to accurately predict an AllStar. 
-
-
 
 ## File Source <a name="file-source"></a>
 1. Baseline_Analysis
@@ -269,105 +277,104 @@ The model seems to provide a decent attempt at predicting whether an NBA player 
 7. Random_Forrest_Complete
 8. Logistical_Regression
 9. Support_Vector_Machine
-
 	
 ## Phase II Images 
 ### Initial And Final
 #### Sample structure of the Machine Learning Model <a name="sample-structure-of-the-machine-learning-model"></a> 
 NBA Season Logistical Pg 1 | | NBA Season Logistical Pg 2
 |:----------------------------------:|:-:|:-----------------------------------:|
-![Pic 17](https://user-images.githubusercontent.com/93271297/159190111-5cf01063-2bc6-4839-b9fe-bdd9ccf34378.png)| | ![Pic 18](https://user-images.githubusercontent.com/93271297/159190153-32425c4e-221e-468c-9665-dc58fdd492c0.png)|
+![Pic 14](https://user-images.githubusercontent.com/93271297/159190111-5cf01063-2bc6-4839-b9fe-bdd9ccf34378.png)| | ![Pic 18](https://user-images.githubusercontent.com/93271297/159190153-32425c4e-221e-468c-9665-dc58fdd492c0.png)|
 	
 NBA Season Logistical Pg 3 | | NBA Season Logistical Pg 4
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 19](https://user-images.githubusercontent.com/93271297/159190176-7d375dcb-13cc-4cc1-9978-e76102dca178.png)| | ![Pic 20](https://user-images.githubusercontent.com/93271297/159190207-e3ce6d97-3647-4617-ba3f-7baef91bcd9f.png)|
+![Pic 15](https://user-images.githubusercontent.com/93271297/159190176-7d375dcb-13cc-4cc1-9978-e76102dca178.png)| | ![Pic 20](https://user-images.githubusercontent.com/93271297/159190207-e3ce6d97-3647-4617-ba3f-7baef91bcd9f.png)|
 
 NBA Season Logistical Pg 5 | | NBA Season Logistical Pg 6
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 21](https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png)| | ![Pic 22](https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png)|
+![Pic 16](https://user-images.githubusercontent.com/93271297/159190232-01de99a1-1447-4d68-9152-c59b9ee89493.png)| | ![Pic 22](https://user-images.githubusercontent.com/93271297/159190243-393add01-a1c6-4c2a-9837-fbef5f873a5c.png)|
 
 ### Additional Information on PCA <a name="additional-informataion-on-PCA"></a>
 The first KMeans Code diagram below shows the code for fitting the PCA into KMeans. The second KMeans Code diagrams shows that we used Allstar as the predictor variable.
 KMeans Code For Fitting the PCA | | KMeans Code Using Allstars
 |:----------------------------------:|:-:|:-----------------------------------:|
-![Pic 23](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Code.png)| | ![Pic 24](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Code2.png)|
+![Pic 17](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Code.png)| | ![Pic 18](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Code2.png)|
 
 KMeans Elbow Curve | PCA All PCA Curve | KMeans Graph
 |:-----------------------------------:|:-------------------------------------:|:-------------------------------------:|
-![Pic 25](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Elbow_Curve.png) | ![Pic 26](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_All_PCA_Curve.png)| ![Pic 30](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Graph.png)|
+![Pic 19](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Elbow_Curve.png) | ![Pic 20](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_All_PCA_Curve.png)| ![Pic 21](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/K_Means_Graph.png)|
 
 PCA Ten Confusion Matrix | PCA Ten Code | PCA Ten Code2
 |:-----------------------------------:|:-------------------------------------:|:-------------------------------------:|
-![Pic 31](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_CnfsnMtrx.png) | ![Pic 27](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Code.png)| ![Pic 28](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Code2.png)|
+![Pic 22](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_CnfsnMtrx.png) | ![Pic 23](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Code.png)| ![Pic 24](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Code2.png)|
 	
 PCA Ten Graph | PCA Ten Importance | PCA Ten Table
 |:-----------------------------------:|:-------------------------------------:|:-------------------------------------:|
-![Pic 29](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Graph.png) | ![Pic 30](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Importance.png)| ![Pic 31](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Table.png)|
+![Pic 25](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Graph.png) | ![Pic 26](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Importance.png)| ![Pic 27](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_Ten_Table.png)|
 	
 # Exploratory Analysis <a name="exploratory-analysis"></a>
 3PA & Games | | Assists & Games 
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 32](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3D3PA_YLabel%3DG.jpg)| | ![Pic 33](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAST_YLabel%3DG.jpg)|
+![Pic 28](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3D3PA_YLabel%3DG.jpg)| | ![Pic 29](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAST_YLabel%3DG.jpg)|
 
  Age & Games | | PF & Games 
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 34](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAge_YLabel%3DG.jpg)| | ![Pic 35](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPF_YLabel%3DG.jpg)|
+![Pic 30](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DAge_YLabel%3DG.jpg)| | ![Pic 31](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPF_YLabel%3DG.jpg)|
 
  PTS & Games | | TRB & Games 
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 36](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPTS_YLabel%3DG.jpg)| | ![Pic 37](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DTRB_YLabel%3DG.jpg)|
+![Pic 32](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DPTS_YLabel%3DG.jpg)| | ![Pic 33](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/ExploratoryFeatures_XLabel%3DTRB_YLabel%3DG.jpg)|
 	
 Initial Top 15 Features | | Final Top 10 Features 
 |:-----------------------------------:|:-:|:-----------------------------------:|
-![Pic 38](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Initial_Top_15_Features.jpg)| | ![Pic 39](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Final_Top_10_Features.jpg)|	
+![Pic 34](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Initial_Top_15_Features.jpg)| | ![Pic 35](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Final_Top_10_Features.jpg)|	
 
 Final Confusion Matrix |  
 |:-----------------------------------:|
-![Pic 40](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/FinalConfusionMatrix.jpg)|
+![Pic 36](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/FinalConfusionMatrix.jpg)|
 
 ### Support Vector Machine
 Spitting into Train and Test Sets
 Support Vector Machine |  
 |:-----------------------------------:|
-![Pic 41](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/SVM_Code.png)|
+![Pic 37](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/SVM_Code.png)|
 	
 Boosting Code | 
 | :-----------------------------------:|
-![Pic 42](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Boosting_Code.png)|
+![Pic 38](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Boosting_Code.png)|
 
 ### Random Forest 
 Spliting into Train and Test Sets
 Randon Forest Undersample Code  | Randon Forest Undersampling Complete
 |:----------------------------------:|:----------------------------------:|
-![Pic 43](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_Code.png)| ![Pic 44](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Rand_Frrst_Complete.png)|
+![Pic 39](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_Code.png)| ![Pic 40](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Rand_Frrst_Complete.png)|
 
 Randon Forest Undersample Confusion Matrix |  
 |:-----------------------------------:|
-![Pic 45](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_ConfMtrx.png)|
+![Pic 41](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_ConfMtrx.png)|
 
 Randon Forest Undersample Graph  | Randon Forest Undersample Top Features
 |:----------------------------------:|:----------------------------------:|
-![Pic 46](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_Graph.png)| ![Pic 47](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_TopFeatures.png)|
+![Pic 42](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_Graph.png)| ![Pic 43](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_TopFeatures.png)|
 
 Randon Forest Undersample Confusion Matrix |  
 |:-----------------------------------:|
-![Pic 48](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_ConfMtrx.png)|	
+![Pic 44](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/RndFrrst_Undersample_ConfMtrx.png)|	
 
 Supervised Model Performance |
 |:-----------------------------------:|
-![Pic 49](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Supervised_Model_Performances.png)|	
+![Pic 45](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Supervised_Model_Performances.png)|	
 
 Exploratory Analysis (Set 1)  |
 |:-----------------------------------:|
-![Pic 50](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set1.png)|		
+![Pic 46](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set1.png)|		
 
 Exploratory Analysis (Set 2)  |
 |:-----------------------------------:|
-![Pic 51](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set2.png)|	
+![Pic 47](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set2.png)|	
 	
 Exploratory Analysis (Set 3)  |
 |:-----------------------------------:|
-![Pic 52](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set3.png)|
+![Pic 48](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set3.png)|
 	
 # Presentation <a name="presentation"></a>
 * Slides Presentations are drafted in Google Slides. 
@@ -379,7 +386,7 @@ Exploratory Analysis (Set 3)  |
 	* Description of the data exploration phase of the project 
 	* Description of the analysis phase of the project
 
-(https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g11fae844228_2_68)
+(https://docs.google.com/presentation/d/1xHHqpMsB-wqEoGpUKD7ocdtU695N1SpS9atkVOunMoE/edit#slide=id.g123c5b9af8f_2_0)
 
 # Dashboard <a name="dashboard"></a>
 * A blueprint for the dashboard is created and includes all of the following:
@@ -389,17 +396,15 @@ Exploratory Analysis (Set 3)  |
 
 Below is a Storyboard layouts and a Mockup layouts
 ## Storyboard and Page 1 
-![table_story](https://user-images.githubusercontent.com/93271297/162647780-cd837c55-d2c8-4a7a-b295-c49571e11c2a.png)
+![Table Story](https://user-images.githubusercontent.com/93271297/162647780-cd837c55-d2c8-4a7a-b295-c49571e11c2a.png)
 
-![slider_story](https://user-images.githubusercontent.com/93271297/162647856-44544a74-d9fc-411c-ac88-d3c339af448e.png)
+![Slider Story](https://user-images.githubusercontent.com/93271297/162647856-44544a74-d9fc-411c-ac88-d3c339af448e.png)
 
 ## Storyboard Page 2 	
-![project_story](https://user-images.githubusercontent.com/93271297/162647876-9edd6639-6b8b-43ea-8eff-087195ed9881.png)
-
+![Project Story](https://user-images.githubusercontent.com/93271297/162647876-9edd6639-6b8b-43ea-8eff-087195ed9881.png)
 
 ## Storyboard Page 3 
-![team_story](https://user-images.githubusercontent.com/93271297/162647867-9191a039-257a-489c-820b-8562abaae55b.png)
-
+![Team Story](https://user-images.githubusercontent.com/93271297/162647867-9191a039-257a-489c-820b-8562abaae55b.png)
 
 # Summary of the Findings <a name="summary-of-the-findings"></a>
 * Does the NBA look the same decade by decade in terms of performance? <br />
@@ -413,6 +418,13 @@ Below is a Storyboard layouts and a Mockup layouts
 * What are the most important stats in terms of determining an NBA All-Star?<br />
 	* <br />
 
+# Lessons Learned <a name="lessons-learned"></a>
+* Have redundancies between team members in case of illness or emergencies. 
+* Clearly articulate the work in process, challenges, and path forward.
+* Identify all dependencies upfront and identify each other strengths and weaknesses.
+* Validating and Collaborating information and sources need to complete the project. 
+* Share lesson learned with others. 
+	
 # References <a name="references"></a>
 * Kaggle - NBA Game Data - Players.csv <br />
 	(https://www.kaggle.com/datasets/nathanlauga/nba-games?select=players.csv&msclkid=1ac414e3b79411eca127c4f5fc6f0cf5)

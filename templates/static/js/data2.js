@@ -25,7 +25,9 @@ let data = [
 ];
 
 const fetchData = async () => {
-  const res = await axios.get("http://localhost:4000/");
+  const res = await axios.get(
+    "https://fathomless-everglades-46618.herokuapp.com/"
+  );
   return res.data;
 };
 >>>>>>> ae41395d2c3ab07414e0409c9ee0f0409000d432
