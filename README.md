@@ -32,6 +32,7 @@
 1. [Presentation](#presentation)
 1. [Dashboard](#dashboard)
 1. [Summary of the Findings](summary-of-the-findings)
+1. [Lessons Learned](lessons-learned)
 1. [References](#references)
 
 ## Topic <a name="topic"></a>
@@ -194,40 +195,50 @@ After performing this portion of the machine learning correctly, we ended up wit
 7.)	Minutes Played per Game
 8.)	Value Over Replacement Player (VORP)
 9.)	Win-Share
-10.)	 Two Pointers Made
-	
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Features_Ranking_hbar_new.png	
+10.)	Two Pointers Made
+
+Features Ranking hbar |
+|:-----------------------------------:| 
+![Pic 4](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Features_Ranking_hbar_new.png) |
 	
 In the file called “Exploratory_Analysis_Final”, the reader can see that we analyzed whether all ten features followed  a normal distribution. Our conclusions were that they did not and so we had to standardized them in both the unsupervised and supervised models. We had to combine two tables from our SQL database: “modern_season_stats” and “per_game_stats”. We performed a left join on both of them for the exploratory analysis and for the unsupervised and supervised models as well. 
 
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set1_Final.png
-
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set2_Final.png
-	
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set3_Final.png
+Features Ranking Exploratory Analysis |
+|:-----------------------------------:| 
+![Pic 5](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set1_Final.png) |
+![Pic 6](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set2_Final.png) |
+![Pic 7](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set3_Final.png) |
 	
 Finally, we created a jupyter notebook called “baseline_analysis” where we used all 71 features and created 71 PCAs and performed a random forest analysis on them in order to understand what a baseline model would look like. When you look through the file you can see that the model is highly accurate at 92% with a recall value of 95% and an f-1 score of 55%. We used this as the baseline when we performed our supervised learning in order to improve the accuracy ratings of the other models. 
 
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Baseline_CM_new.png
+Baseline |
+|:-----------------------------------:| 
+![Pic 8](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Baseline_CM_new.png) |
 
 ## Description of preliminary feature engineering and feature selection, including decision-making process.
-	
 As previously mentioned, we reversed two of the main processes in feature engineering and selection in Phase III and did them in the following order: 1.) Random Forest Features Importance Ranking, 2.) Princpal Components Analysis. After doing PCA, we then proceeded to perform K-Means clustering. Our work is in the following jupyter notebooks: “Features_Ranking_Final” and “PCA_KMeans_Redo_Final”. The first file denotes our features importance ranking. Again, we went from 71 features explaining the variation of the target variable, whether the NBA player was an All-Star or not, to 10 features explain about 64% of the variation of the target variable. 
 	
 If the reader proceeds to the second jupyter notebook, “PCA_KMeans_Redo_Final”, he can see our Principal Components Analysis and K-Means clustering results. We started with a PCA of three for all ten of our top ten features. PCA1 explained about 88% of the variation of the target variable, leaving PCAs 2 & 3 to explain 4.6% and 2.9% of the variation in the target variable. As a result, we went back and re-performed the PCA with two components instead of three. The rest of our results can be seen in the notebook. 
-	
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_ten_features_new.png
 
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/cvr_evr_new.png
+PCA Ten Features |
+|:-----------------------------------:| 
+![Pic 8](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_ten_features_new.png) |
+
+Cvr Evr New |
+|:-----------------------------------:| 
+![Pic 9](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/cvr_evr_new.png) |
 	
 Finally, we did a K-Means clustering. Our elbow curve suggested we select a K=2. After that  we matched PCAs 1 & 2 against one another in a 2-D scatter plot with each point representing whether a player was an NBA All Star or not. As you can see, our analysis form two decently distinct clusters.
 
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Elbow_Curve_new.png
+Elbow Curve |
+|:-----------------------------------:| 
+![Pic 10](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Elbow_Curve_new.png) |
 
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/KMeans_Clustering_new.png	
+KMeans Clustering |
+|:-----------------------------------:| 
+![Pic 11](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/KMeans_Clustering_new.png) |
 	
 ## Description of how data was split into training and testing sets.
-	
 Just like we did in Phase II, we split the sets into 75% training and 25% testing. This was after we undersampled the data in order to address overfitting issues inherent within the data (i.e., there is significant overrepresentation of non-NBA AllStars than NBA AllStars). So the undersampling significantly reduced the size of the sets in order to equalize the amount of representation between AllStar and non-AllStars within the target variable. 
 
 ## Explanation of model choice, including limitations and benefits.
@@ -236,28 +247,26 @@ In Phase II, we went with Random Forest, however, due to changes in the ten feat
 Still, there were benefits with utilizing the Logistical Regression model. According to research, logistical regression models are easier to implement, interpret, and are more efficient to train than most other supervised machine learning models. In addition, it makes no assumptions about the distribution of classes in the feature space, which if we did not normalize the data, would have worked to our advantage. However, we did normalize the data and so this was not a concern for our project. 
 	
 There are disadvantages though to utilizing a logistical regression model. A main problem is that the model constructs linear boundaries when a feature may not follow a linear relationship with the target variable. 
-	
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Logistical_Regression_CM_new.png
+
+Logistical Regression CM |
+|:-----------------------------------:| 
+![Pic 12](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Logistical_Regression_CM_new.png) |
  
 ## If changes occurred between the Segment 2 and Segment 3 deliverables
-
 Again, we reordered the steps from previously doing the PCA first and then the Features Ranking second to reversing these steps in order to acquire the correct ten features for our model. The ten features we have for Phase III are different from the ones in Phase II so we reran all the unsupervised and supervised models as  a result. This time, Logistical Regression performed the best and so we went with this model instead of Random Forest, which is what we went with last time. 
 	
 ## Description of how they have trained the model thus far, and any additional training that will take place
-	
 We will try to change the training/testing variables from the original 75%/25% mode to see if that improves the accuracy scores. We want to avoid making the model more complex because that will create additional overfitting problems. 
 
 ## Description of current accuracy score
-	
 The Logistical Regression model produced an accuracy rate of 92.2%, a recall for AllStars of 95%, and F-1 score of 55%. These were essentially the same as the scores for the baseline. 
 
-https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Phases_II_III_Model_Performances_new.png	
-	
+Phase II & III Model Performances |
+|:-----------------------------------:| 
+![Pic 13](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Phases_II_III_Model_Performances_new.png) |
+
 ## Additionally, the model obviously addresses the question or problem the team is solving.
-	
 The model seems to provide a decent attempt at predicting whether an NBA player would be an AllStar if he achieves certain milestones quantitatively. The actual selection process for selecting an NBA AllStar is very subjective with fans voting for their favorite players as the starters and then coaches and players selecting the back-up players. Even though they may vote based on player stats, there is still a subjective element to their decisions which makes it hard for our model to accurately predict an AllStar. 
-
-
 
 ## File Source <a name="file-source"></a>
 1. Baseline_Analysis
@@ -269,7 +278,6 @@ The model seems to provide a decent attempt at predicting whether an NBA player 
 7. Random_Forrest_Complete
 8. Logistical_Regression
 9. Support_Vector_Machine
-
 	
 ## Phase II Images 
 ### Initial And Final
@@ -389,17 +397,15 @@ Exploratory Analysis (Set 3)  |
 
 Below is a Storyboard layouts and a Mockup layouts
 ## Storyboard and Page 1 
-![table_story](https://user-images.githubusercontent.com/93271297/162647780-cd837c55-d2c8-4a7a-b295-c49571e11c2a.png)
+![Table Story](https://user-images.githubusercontent.com/93271297/162647780-cd837c55-d2c8-4a7a-b295-c49571e11c2a.png)
 
-![slider_story](https://user-images.githubusercontent.com/93271297/162647856-44544a74-d9fc-411c-ac88-d3c339af448e.png)
+![Slider Story](https://user-images.githubusercontent.com/93271297/162647856-44544a74-d9fc-411c-ac88-d3c339af448e.png)
 
 ## Storyboard Page 2 	
-![project_story](https://user-images.githubusercontent.com/93271297/162647876-9edd6639-6b8b-43ea-8eff-087195ed9881.png)
-
+![Project Story](https://user-images.githubusercontent.com/93271297/162647876-9edd6639-6b8b-43ea-8eff-087195ed9881.png)
 
 ## Storyboard Page 3 
-![team_story](https://user-images.githubusercontent.com/93271297/162647867-9191a039-257a-489c-820b-8562abaae55b.png)
-
+![Team Story](https://user-images.githubusercontent.com/93271297/162647867-9191a039-257a-489c-820b-8562abaae55b.png)
 
 # Summary of the Findings <a name="summary-of-the-findings"></a>
 * Does the NBA look the same decade by decade in terms of performance? <br />
@@ -413,6 +419,13 @@ Below is a Storyboard layouts and a Mockup layouts
 * What are the most important stats in terms of determining an NBA All-Star?<br />
 	* <br />
 
+# Lessons Learned <a name="lessons-learned"></a>
+* Have redundancies between team members in case of illness or emergencies. 
+* Clearly articulate the work in process, challenges, and path forward.
+* Identify all dependencies upfront and identify each other strengths and weaknesses.
+* Validating and Collaborating information and sources need to complete the project. 
+* Share lesson learned with others. 
+	
 # References <a name="references"></a>
 * Kaggle - NBA Game Data - Players.csv <br />
 	(https://www.kaggle.com/datasets/nathanlauga/nba-games?select=players.csv&msclkid=1ac414e3b79411eca127c4f5fc6f0cf5)
