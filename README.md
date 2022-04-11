@@ -250,7 +250,12 @@ The model seems to provide a decent attempt at predicting whether an NBA player 
 8. Logistical_Regression
 9. Support_Vector_Machine
 
-## PCA KMeans <a name="pca-kmeans"></a> 
+## Phase III Images
+### Baseline Analysis
+
+	
+	
+## Phase II Images 
 ### Initial And Final
 #### Sample structure of the Machine Learning Model <a name="sample-structure-of-the-machine-learning-model"></a> 
 NBA Season Logistical Pg 1 | | NBA Season Logistical Pg 2
