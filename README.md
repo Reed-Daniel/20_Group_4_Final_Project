@@ -196,10 +196,19 @@ After performing this portion of the machine learning correctly, we ended up wit
 9.)	Win-Share
 10.)	 Two Pointers Made
 	
+https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Features_Ranking_hbar_new.png	
+	
 In the file called “Exploratory_Analysis_Final”, the reader can see that we analyzed whether all ten features followed  a normal distribution. Our conclusions were that they did not and so we had to standardized them in both the unsupervised and supervised models. We had to combine two tables from our SQL database: “modern_season_stats” and “per_game_stats”. We performed a left join on both of them for the exploratory analysis and for the unsupervised and supervised models as well. 
+
+https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set1_Final.png
+
+https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set2_Final.png
+	
+https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Exploratory_Analysis_Set3_Final.png
 	
 Finally, we created a jupyter notebook called “baseline_analysis” where we used all 71 features and created 71 PCAs and performed a random forest analysis on them in order to understand what a baseline model would look like. When you look through the file you can see that the model is highly accurate at 92% with a recall value of 95% and an f-1 score of 55%. We used this as the baseline when we performed our supervised learning in order to improve the accuracy ratings of the other models. 
 
+https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Baseline_CM_new.png
 
 ## Description of preliminary feature engineering and feature selection, including decision-making process.
 	
@@ -207,9 +216,16 @@ As previously mentioned, we reversed two of the main processes in feature engine
 	
 If the reader proceeds to the second jupyter notebook, “PCA_KMeans_Redo_Final”, he can see our Principal Components Analysis and K-Means clustering results. We started with a PCA of three for all ten of our top ten features. PCA1 explained about 88% of the variation of the target variable, leaving PCAs 2 & 3 to explain 4.6% and 2.9% of the variation in the target variable. As a result, we went back and re-performed the PCA with two components instead of three. The rest of our results can be seen in the notebook. 
 	
+https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/PCA_ten_features_new.png
+
+https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/cvr_evr_new.png
+	
 Finally, we did a K-Means clustering. Our elbow curve suggested we select a K=2. After that  we matched PCAs 1 & 2 against one another in a 2-D scatter plot with each point representing whether a player was an NBA All Star or not. As you can see, our analysis form two decently distinct clusters.
 
+https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Elbow_Curve_new.png
 
+https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/KMeans_Clustering_new.png	
+	
 ## Description of how data was split into training and testing sets.
 	
 Just like we did in Phase II, we split the sets into 75% training and 25% testing. This was after we undersampled the data in order to address overfitting issues inherent within the data (i.e., there is significant overrepresentation of non-NBA AllStars than NBA AllStars). So the undersampling significantly reduced the size of the sets in order to equalize the amount of representation between AllStar and non-AllStars within the target variable. 
@@ -220,6 +236,8 @@ In Phase II, we went with Random Forest, however, due to changes in the ten feat
 Still, there were benefits with utilizing the Logistical Regression model. According to research, logistical regression models are easier to implement, interpret, and are more efficient to train than most other supervised machine learning models. In addition, it makes no assumptions about the distribution of classes in the feature space, which if we did not normalize the data, would have worked to our advantage. However, we did normalize the data and so this was not a concern for our project. 
 	
 There are disadvantages though to utilizing a logistical regression model. A main problem is that the model constructs linear boundaries when a feature may not follow a linear relationship with the target variable. 
+	
+https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Logistical_Regression_CM_new.png
  
 ## If changes occurred between the Segment 2 and Segment 3 deliverables
 
@@ -233,6 +251,8 @@ We will try to change the training/testing variables from the original 75%/25% m
 	
 The Logistical Regression model produced an accuracy rate of 92.2%, a recall for AllStars of 95%, and F-1 score of 55%. These were essentially the same as the scores for the baseline. 
 
+https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/Phases_II_III_Model_Performances_new.png	
+	
 ## Additionally, the model obviously addresses the question or problem the team is solving.
 	
 The model seems to provide a decent attempt at predicting whether an NBA player would be an AllStar if he achieves certain milestones quantitatively. The actual selection process for selecting an NBA AllStar is very subjective with fans voting for their favorite players as the starters and then coaches and players selecting the back-up players. Even though they may vote based on player stats, there is still a subjective element to their decisions which makes it hard for our model to accurately predict an AllStar. 
@@ -250,10 +270,6 @@ The model seems to provide a decent attempt at predicting whether an NBA player 
 8. Logistical_Regression
 9. Support_Vector_Machine
 
-## Phase III Images
-### Baseline Analysis
-
-	
 	
 ## Phase II Images 
 ### Initial And Final
