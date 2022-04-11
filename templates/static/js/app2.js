@@ -62,7 +62,6 @@ function handleClick() {
     // rows where the `name` value matches the filter value
     filteredData = filteredData.filter((row) => row.height === height);
   }
-
   if (weight) {
     // Apply `filter` to the table data to only keep the
     // rows where the `name` value matches the filter value
