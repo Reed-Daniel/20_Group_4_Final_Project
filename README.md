@@ -340,14 +340,18 @@ Exploratory Analysis (Set 3)  |
 	Description of interactive element(s)
 
 Below is a Storyboard layouts and a Mockup layouts
-## Storyboard and Page 1 - Player Information
-![Pic 53](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage1.jpg)
+## Storyboard and Page 1 
+![table_story](https://user-images.githubusercontent.com/93271297/162647780-cd837c55-d2c8-4a7a-b295-c49571e11c2a.png)
 
-## Storyboard Page 2 - NBA Stats	
-![Pic 54](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage2.jpg)	
+![slider_story](https://user-images.githubusercontent.com/93271297/162647856-44544a74-d9fc-411c-ac88-d3c339af448e.png)
 
-## Storyboard Page 3 - NBA News	
-![Pic 55](https://github.com/krmcclelland/20_Group_4_Final_Project/blob/main/Images/StoryboardPage3.jpg)
+## Storyboard Page 2 	
+![project_story](https://user-images.githubusercontent.com/93271297/162647876-9edd6639-6b8b-43ea-8eff-087195ed9881.png)
+
+
+## Storyboard Page 3 
+![team_story](https://user-images.githubusercontent.com/93271297/162647867-9191a039-257a-489c-820b-8562abaae55b.png)
+
 
 # Summary of the Findings <a name="summary-of-the-findings"></a>
 * Does the NBA look the same decade by decade in terms of performance? <br />
